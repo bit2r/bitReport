@@ -1,0 +1,16 @@
+CHANGES IN R VERSION 0.2.0:
+  NEW FEATURES:
+    * NanumSquare 폰트를 패키지 자체에 내장 (#3)
+    * flexdashboard 템플리트 개발 및 패키지내 포함 (#4)
+
+
+
+CHANGES IN R VERSION 0.1.1:
+  BUG FIXES:
+    * plot_d_kpi() 함수의 'object 'unhcr_grey' not found ' 오류 수정 (#1)
+    
+  NEW FEATURES:
+    * reactable 포맷의 테이블 정보를 paged report에 포함하기 위해서 phantomjs
+      프로그램을 패키지 내부에 포함하였음 (#2)
+
+      

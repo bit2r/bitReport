@@ -1,0 +1,162 @@
+---
+title: "데모 대시보드"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(ggplot2)
+library(highcharter)
+library(forecast)
+```
+
+
+Dashboard 예제 {data-icon="ion-stats-bars"}
+=====================================  
+
+Row {data-width=200}
+-------------------------------------
+
+### Primary
+
+```{r}
+valueBox(1, caption = "primary", icon = "fa-github")
+```
+
+### Info
+
+```{r}
+valueBox(2, caption = "info", color = "info", icon = "fa-twitter")
+```
+
+### Success
+
+```{r}
+valueBox(3, caption = "success", color = "success", icon = "glyphicon-time")
+```
+
+### Warning
+
+```{r}
+valueBox(4, caption = "warning", color = "warning", icon = "fa-facebook")
+```
+
+### Danger
+
+```{r}
+valueBox(5, caption = "danger", color = "danger", icon = "fa-facebook")
+```
+
+### Custom
+
+```{r}
+# TODO: why is there a linked value here?
+valueBox(
+  6, caption = "custom", color = "lightgray",
+  icon = "fab fa-r-project"
+)
+```
+
+
+Row {data-width=200}
+-------------------------------------
+
+### Contact Rate
+
+```{r}
+rate <- 91
+gauge(rate, min = 0, max = 100, symbol = '%', gaugeSectors(
+  success = c(80, 100), warning = c(40, 79), danger = c(0, 39)
+))
+```
+
+### Average Rating 
+
+```{r}
+rating <- 37.4
+gauge(rating, min = 0, max = 50, gaugeSectors(
+  success = c(41, 50), warning = c(21, 40), danger = c(0, 20)
+))
+```
+
+### Cancellations
+
+```{r}
+cancellations <- 7
+gauge(cancellations, min = 0, max = 10, gaugeSectors(
+  success = c(0, 2), warning = c(3, 6), danger = c(7, 10)
+))
+```
+
+
+Row {.tabset .tabset-fade}
+-------------------------------------
+   
+### Basic Table
+    
+```{r}
+knitr::kable(mtcars)
+```
+
+### Interactive Table
+    
+```{r}
+DT::datatable(mtcars, fillContainer = TRUE)
+```
+
+### Sales Forecast
+
+```{r}
+thm <- 
+  hc_theme(
+    colors = c("#1a6ecc", "#434348", "#90ed7d"),
+    chart = list(
+      backgroundColor = "transparent",
+      style = list(fontFamily = "Source Sans Pro")
+    ),
+    xAxis = list(
+      gridLineWidth = 1
+    )
+  )
+
+AirPassengers %>% 
+  forecast(level = 90) %>% 
+  hchart() %>% 
+  hc_add_theme(thm)
+```
+
+
+고객 성향분석 {data-icon="ion-stats-bars"}
+=====================================  
+
+Row {.tabset .tabset-fade}
+-------------------------------------
+
+### 고객 학력별 구매 패턴
+
+* 교육수준이 **PhD**인 고객의 **캠페인 반응률이 높으며**,
+* **Graduation**인 고객의 **고객수가 가장 많음**
+
+<br>
+
+```{r, eval=TRUE}
+library(bitReport)
+
+plot_edu_metric()
+```
+
+
+### 고객 학력별 구매 성장률
+
+* 교육수준이 **2n Cycle**인 고객의 구매금액은 **전월대비 감소**하였으나,
+* **Basic** 고객은 전월대비 **전월대비 증가**하였음
+
+<br>
+
+```{r, eval=TRUE}
+plot_edu_increse(page_size = 30)
+```
+

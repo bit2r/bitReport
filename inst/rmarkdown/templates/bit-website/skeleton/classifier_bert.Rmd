@@ -1,0 +1,35 @@
+---
+title: "BERT 기반 민원 예측"
+description: |
+  텍스트 분석의 실마리를 찾기 위해서 상담 내역 텍스트 데이터를 탐색합니다. 여기에는 데이터의 품질을 보정하기 위한 관점도 포함되어 있습니다.
+author:
+  - name: 유충현 
+    url: https://choonghyunryu.github.io/
+    affiliation: DataAnalytics팀
+    affiliation_url: https://www.hanwhalife.com/index.jsp
+  - name: 홍길동 
+    affiliation: DataAnalytics팀
+    affiliation_url: https://www.hanwhalife.com/index.jsp    
+date: "`r Sys.Date()`"
+output: 
+  distill::distill_article:
+    toc: true
+    toc_depth: 3  
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      message = FALSE, 
+                      warning = FALSE, 
+                      collapse = FALSE,
+                      fig.align = "center",
+                      tidy.opts = list(width.cutoff = 70), 
+                      tidy = TRUE)
+knitr::opts_chunk$set(fig.width = 12, fig.height = 9)
+
+library(shiny, warn.conflicts = FALSE)
+library(dplyr, warn.conflicts = FALSE)
+library(ggplot2, warn.conflicts = FALSE)
+
+xaringanExtra :: use_panelset()
+```

@@ -1,0 +1,67 @@
+#' GA360 일 KPI 마트
+#'
+#' @description
+#' GA360 로그로부터 일별 집계한 대표적인 KPI에 대한 집계 정보
+#'
+#' @details
+#' GA360 일 KPI 마트는 웹/앱 서비스의 핵심 지표에 대해서 48개의 메트릭을 3개월치 집계한 샘플 데이터다.
+#'
+#' @format 데이터 프레임은 273개 관측치와 51개의 변수를 포함하며, 개별 변수는 다음과 같다.:
+#' \describe{
+#'   \item{platform}{character. 플랫폼 코드.}
+#'   \item{date}{character. 집계 일자.}
+#'   \item{month}{character. 집계월.}
+#'   \item{n_user_d1}{integer. 일 활성사용자 수.}
+#'   \item{n_user_w1}{integer. 7일 이동 활성사용자 수.}
+#'   \item{n_user_w2}{integer. 14일 활성사용자 수.}
+#'   \item{n_user_w3}{integer. 21일 활성사용자 수.}
+#'   \item{n_user_w4}{integer. 28일 활성사용자 수.}
+#'   \item{n_user_m1}{integer. 월 활성사용자 수.}
+#'   \item{n_newuser_d1}{integer. 일 신규사용자 수.}
+#'   \item{n_newuser_w1}{numeric. 7일 이동 신규사용자 수.}
+#'   \item{n_newuser_w2}{numeric. 14일 신규사용자 수.}
+#'   \item{n_newuser_w3}{numeric. 21일 신규사용자 수.}
+#'   \item{n_newuser_w4}{numeric. 28일 신규사용자 수.}
+#'   \item{n_newuser_m1}{numeric. 월 신규사용자 수.}
+#'   \item{n_session_d1}{integer. 일 세션 수.}
+#'   \item{n_session_w1}{numeric. 7일 이동 세션 수.}
+#'   \item{n_session_w2}{numeric. 14일 세션 수.}
+#'   \item{n_session_w3}{numeric. 21일 세션 수.}
+#'   \item{n_session_w4}{numeric. 28일 세션 수.}
+#'   \item{n_session_m1}{numeric. 월 세션 수.}
+#'   \item{n_newsession_d1}{integer. 일 신규세션 수.}
+#'   \item{n_newsession_w1}{numeric. 7일 이동 신규세션 수.}
+#'   \item{n_newsession_w2}{numeric. 14일 신규세션 수.}
+#'   \item{n_newsession_w3}{numeric. 21일 신규세션 수.}
+#'   \item{n_newsession_w4}{numeric. 28일 신규세션 수.}
+#'   \item{n_newsession_m1}{numeric. 월 신규세션 수.}
+#'   \item{n_screen_d1}{integer. 일 화면 수.}
+#'   \item{n_screen_w1}{numeric. 7일 이동 화면 수.}
+#'   \item{n_screen_w2}{numeric. 14일 화면 수.}
+#'   \item{n_screen_w3}{numeric. 21일 화면 수.}
+#'   \item{n_screen_w4}{numeric. 28일 화면 수.}
+#'   \item{n_screen_m1}{numeric. 월 화면 수.}
+#'   \item{n_page_d1}{integer. 일 페이지 수.}
+#'   \item{n_page_w1}{numeric. 7일 이동 페이지 수.}
+#'   \item{n_page_w2}{numeric. 14일 페이지 수.}
+#'   \item{n_page_w3}{numeric. 21일 페이지 수.}
+#'   \item{n_page_w4}{numeric. 28일 페이지 수.}
+#'   \item{n_page_m1}{numeric. 월 페이지 수.}
+#'   \item{tot_timeonsite_d1}{integer. 일 세션체류 시간.}
+#'   \item{tot_timeonsite_w1}{numeric. 7일 이동 세션체류 시간.}
+#'   \item{tot_timeonsite_w2}{numeric. 14일 세션체류 시간.}
+#'   \item{tot_timeonsite_w3}{numeric. 21일 세션체류 시간.}
+#'   \item{tot_timeonsite_w4}{numeric. 28일 세션체류 시간.}
+#'   \item{tot_timeonsite_m1}{numeric. 월 세션체류 시간.}
+#'   \item{tot_timeonscreen_d1}{integer. 일 화면체류 시간수.}
+#'   \item{tot_timeonscreen_w1}{numeric. 7일 이동 화면체류 시간수.}
+#'   \item{tot_timeonscreen_w2}{numeric. 14일 화면체류 시간수.}
+#'   \item{tot_timeonscreen_w3}{numeric. 21일 화면체류 시간수.}
+#'   \item{tot_timeonscreen_w4}{numeric. 28일 화면체류 시간수.}
+#'   \item{tot_timeonscreen_m1}{numeric. 월 화면체류 시간수.}
+#' }
+#' @docType data
+#' @keywords datasets
+#' @name TB_D_KPIS
+#' @usage data(TB_D_KPIS)
+NULL

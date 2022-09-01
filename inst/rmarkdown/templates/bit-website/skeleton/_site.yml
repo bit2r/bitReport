@@ -1,0 +1,22 @@
+name: "민원 상담콜 분석"
+title: "민원 상담콜 분석"
+description: |
+  My Website
+output_dir: "docs"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "상담 내역 STT 데이터 탐색"
+      href: discovery_documents.html
+    - text: "텍스트 기반 이진분류 모형"
+      menu:
+        - text: "LASSO 모형기반 민원 예측"
+          href: classifier_lasso.html
+        - text: "BERT 기반 민원 예측"
+          href: classifier_bert.html
+output:
+  distill::distill_article:
+    theme: theme.css
+    includes:
+      after_body: footer.html

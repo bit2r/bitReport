@@ -1,0 +1,47 @@
+---
+title: "민원 상담콜 분석"
+description: |
+  상담센터의 상담콜 음성 데이터를 텍스트로 변환한 STT 데이터로 상담 콜을 이해하고, 민원을 유발하는 상담 콜을 예측해 봅니다.
+site: distill::distill_website
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 3  
+author:
+  - name: 유충현 
+    url: https://choonghyunryu.github.io/
+    affiliation: 한국 R 사용자회
+    affiliation_url: https://r2bit.com/   
+date: "`r Sys.Date()`" 
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+# STT 텍스트 분석
+
+
+음성 인식(Speech Recognition)이란 사람이 말하는 음성 언어를 컴퓨터가 해석해 그 내용을 문자 데이터로 전환하는 처리를 말합니다. **STT(Speech-to-Text)**라고도 합니다. 
+
+상담센터의 상담 내용을 텍스트화한 STT 데이터를 **자연어 처리(NLP, Natural Language Processing)하여 함축되어 있는 고객의 의도를 이해**합니다.
+
+<br>
+
+```{r network, echo=FALSE, out.width = "55%", fig.align='center'}
+knitr::include_graphics("img/what-is-text-analysis.png")
+```
+
+
+# 민원 상담콜 분석
+
+
+상담콜 중에서 민원으로 전이되는 사례가 있습니다. 이 건들의 텍스트 데이터를 이해하고 **민원을 예측하는 이진분류 모형**을 만들어봅니다.
+
+<br>
+
+```{r gis, echo=FALSE, out.width = "70%", fig.align='center'}
+knitr::include_graphics("img/complaint.png")
+```
+
