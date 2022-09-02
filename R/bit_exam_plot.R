@@ -169,9 +169,9 @@ plot_edu_increse <- function(bar_ratio = 1, page_size = 20) {
       Education = colDef(name = "교육수준", minWidth = 70),
       product = colDef(name = "구매금액 종류", minWidth = 120),
       `2014-05` = colDef(name = "2014-05", format = colFormat(separators = TRUE),
-                    minWidth = 70),
+                         minWidth = 70),
       `2014-06` = colDef(name = "2014-06", format = colFormat(separators = TRUE),
-                    minWidth = 70),
+                         minWidth = 70),
       profit = colDef(
         name = "증감비율 (%)",
         defaultSortOrder = "desc",
@@ -322,7 +322,7 @@ plot_country_trend <- function(start_year = 1990, end_year = 2020, country = NUL
 gradient_color <- function(x) {
   idx_pos <- which(x >= 0)
   idx_neg <- which(x < 0)  
-
+  
   blue_pal <- function(x) rgb(colorRamp(c("#9fc7df", "#416ea4"))(x),
                               maxColorValue = 255)
   
@@ -333,14 +333,14 @@ gradient_color <- function(x) {
     normalized_pos <- "#416ea4"
   } else if (length(idx_pos) > 1) {
     normalized_pos <- blue_pal((x[idx_pos] - min(x[idx_pos])) / 
-      (max(x[idx_pos]) - min(x[idx_pos])))
+                                 (max(x[idx_pos]) - min(x[idx_pos])))
   }
   
   if (length(idx_neg) == 1) {
     normalized_neg <- "#e60000"
   } else if (length(idx_neg) > 1) {
     normalized_neg <- red_pal((x[idx_neg] - min(x[idx_neg])) / 
-      (max(x[idx_neg]) - min(x[idx_neg])))
+                                (max(x[idx_neg]) - min(x[idx_neg])))
   }
   
   if (length(idx_pos) >= 1) {
@@ -350,7 +350,7 @@ gradient_color <- function(x) {
   if (length(idx_neg) >= 1) {
     x[idx_neg] <- normalized_neg  
   }
-
+  
   x
 }
 
@@ -434,29 +434,29 @@ table_country_metric <- function(base_year = 2020, country = NULL) {
       columns = list(
         country_name = reactable::colDef(name = "국가", align = "left", width = 100),
         population = reactable::colDef(name = "인구", align = "left",
-                                   cell = function(value) {
-                                     width <- paste0(value / (max(tab$population) + 20000) * 100, "%")
-                                     value <- value %>% formatC(format = "d", big.mark = ",")
-                                     bar_chart(value, width = width, fill = "#008cec", background = "#e1e1e1")
-                                   }),
+                                       cell = function(value) {
+                                         width <- paste0(value / (max(tab$population) + 20000) * 100, "%")
+                                         value <- value %>% formatC(format = "d", big.mark = ",")
+                                         bar_chart(value, width = width, fill = "#008cec", background = "#e1e1e1")
+                                       }),
         life_expectancy = reactable::colDef(name = "기대수명", align = "left",
-                                      cell = function(value) {
-                                        width <- paste0(value / (max(tab$life_expectancy) + 0) * 100, "%")
-                                        value <- value %>% formatC(format = "d", big.mark = ",")
-                                        bar_chart(value, width = width, fill = "#fc5185", background = "#e1e1e1")
-                                      }),
+                                            cell = function(value) {
+                                              width <- paste0(value / (max(tab$life_expectancy) + 0) * 100, "%")
+                                              value <- value %>% formatC(format = "d", big.mark = ",")
+                                              bar_chart(value, width = width, fill = "#fc5185", background = "#e1e1e1")
+                                            }),
         gdp = reactable::colDef(name = "GDP (단위 1백만$)", align = "left",
-                                             cell = function(value) {
-                                               width <- paste0(value / (max(tab$gdp) + 0.5) * 100, "%")
-                                               value <- value %>% formatC(format = "d", big.mark = ",")
-                                               bar_chart(value, width = width, fill = "#32cd32", background = "#e1e1e1")
-                                             }),
+                                cell = function(value) {
+                                  width <- paste0(value / (max(tab$gdp) + 0.5) * 100, "%")
+                                  value <- value %>% formatC(format = "d", big.mark = ",")
+                                  bar_chart(value, width = width, fill = "#32cd32", background = "#e1e1e1")
+                                }),
         gdp_per_capita = reactable::colDef(name = "1인당 GDP", align = "left",
-                                         cell = function(value) {
-                                           width <- paste0(value / max(tab$gdp_per_capita) * 100, "%")
-                                           value <- value %>% formatC(format = "d", big.mark = ",")
-                                           bar_chart(value, width = width, fill = "#b070c8", background = "#e1e1e1")
-                                         }),
+                                           cell = function(value) {
+                                             width <- paste0(value / max(tab$gdp_per_capita) * 100, "%")
+                                             value <- value %>% formatC(format = "d", big.mark = ",")
+                                             bar_chart(value, width = width, fill = "#b070c8", background = "#e1e1e1")
+                                           }),
         gdp_growth = reactable::colDef(
           name = "GDP 증가율",
           defaultSortOrder = "desc",
@@ -540,7 +540,7 @@ custom_color_bar <- function (color = "lightgray", fixed_width = 150, ...) {
 #' @import formattable
 #' @export
 formatable_country_metric <- function(base_year = 2020, country = NULL,
-                             fixed_width = 100) {
+                                      fixed_width = 100) {
   metrics <- c("population", "life_expectancy", "gdp", "gdp_per_capita", "gdp_growth")
   
   if (is.null(country)) {
@@ -583,7 +583,7 @@ formatable_country_metric <- function(base_year = 2020, country = NULL,
 
 
 # Render a bar chart with positive and negative values
-#' @importFrom htmltools div
+#' @importFrom htmltools div tagAppendChild
 bar_chart_pos_neg <- function(label, value, max_value = 1, height = "16px",
                               pos_fill = "#005ab5", neg_fill = "#dc3220") {
   neg_chart <- htmltools::div(style = list(flex = "1 1 0"))
@@ -593,53 +593,57 @@ bar_chart_pos_neg <- function(label, value, max_value = 1, height = "16px",
   if (value < 0) {
     bar <- htmltools::div(style = list(marginLeft = "8px", background = neg_fill, width = width, height = height))
     chart <- htmltools::div(style = list(display = "flex", alignItems = "center", justifyContent = "flex-end"), label, bar)
-    neg_chart <- tagAppendChild(neg_chart, chart)
+    neg_chart <- htmltools::tagAppendChild(neg_chart, chart)
   } else {
     bar <- htmltools::div(style = list(marginRight = "8px", background = pos_fill, width = width, height = height))
     chart <- htmltools::div(style = list(display = "flex", alignItems = "center"), bar, label)
-    pos_chart <- tagAppendChild(pos_chart, chart)
+    pos_chart <- htmltools::tagAppendChild(pos_chart, chart)
   }
   
   htmltools::div(style = list(display = "flex"), neg_chart, pos_chart)
 }
 
 
-#' KPI 메트릭의 전월과의 성장률 비교
+#' 국가 통계의 전년도와의 성장률 비교
 #'
-#' @description compare_country_metric()은 월별로 집계된 마트의 KPI 메트릭을 전월과 비교하여, 그 증감률을 테이블로 표현한다.
+#' @description compare_country_metric()은 년도별로 국가 통계를 전년도와 비교하여, 그 증감률을 테이블로 표현한다.
 #'
-#' @details 집계 테이블은 월별로 집계된 GA KPI 마트를 이용한 시각화를 포함한 집계표로 일평균 사용자수,
-#' 일평균 세션수, 평균 세션시간, 일평균 신규 사용자수, 일평균 신규 세션수, 신규세션 비율을 출력한다.
+#' @details 집계 테이블은 시각화를 포함한 집계표로 인구, 기대수명, 1인당 GDP, 상품/서비스 수입, 상품/서비스 수출, 
+#' 기대수명을 출력한다.
 #'
 #' @param prev_year numeric. 이전 년도.
 #' @param curr_year numeric. 기준 년도.
-#' @param platform_cd character. 표시할 대상의 플랫폼 코드.
+#' @param country character. 시각화할 국가 이름.
 #' @param metric character. 집계할 메트릭.
 #' @param bar_ratio numeric. 증감비율로 표현할 막대의 가중치. 기본값은 1이다.
 #' @param page_size integer. 한 페이지에 출력할 레코드 수.
-#' @param country_band logical. 플랫폼 이름에 밴드를 지정할지의 여부. 기본값은 FALSE, TRUE이면, 짝수번쨰 플랫폼에 회색 밴드를 표시한다.
+#' @param country_band logical. 국가 이름에 밴드를 지정할지의 여부. 
+#' 기본값은 FALSE, TRUE이면, 짝수번째 국가 이름에 회색 밴드를 표시한다.
 #' @details
-#' platform_cd 종류는 다음과 같다.
+#' country 종류는 다음과 같다.
 #' \itemize{
-#'   \item "ONS" : 온슈어
-#'   \item "HMP" : 홈페이지
-#'   \item "IWL" : 보험월렛
+#'   \item "United States" : 미국
+#'   \item "China" : 중국
+#'   \item "Japan" : 일본
+#'   \item "Germany" : 독일
+#'   \item "United Kingdom" : 영국
+#'   \item "India" : 인도
 #' }
 #' metric은 집계 지표로 다음과 같다.
 #' \itemize{
-#'   \item "n_user" : 일평균 사용자수 (명)
-#'   \item "n_session" : 일평균 세션수 (건)
-#'   \item "timeonsite" : 평균 세션시간 (초)
-#'   \item "n_newuser" : 일평균 신규 사용자수 (명)
-#'   \item "n_newsession" : 일평균 신규 세션수 (건)
-#'   \item "newsession_rate" : 신규세션 비율 (%)
+#'   \item "gdp_per_capita" : 인당 GDP
+#'   \item "imports_gs" : 상품/서비스 수입
+#'   \item "exports_gs" : 상품/서비스 수출
+#'   \item "unemployment" : 실업률
+#'   \item "population" : 인구 (백만명)
+#'   \item "life_expectancy" : 기대수명
 #' }
 #' @examples
 #' compare_country_metric()
 #'
 #' compare_country_metric(bar_ratio = 2, page_size = 18)
 #'
-#' compare_country_metric(metrics = c("n_user", "n_session"))
+#' compare_country_metric(metrics = c("population", "gdp_per_capita"))
 #'
 #' compare_country_metric(bar_ratio = 1.5, page_size = 18, country_band = TRUE)
 #'
@@ -650,9 +654,9 @@ bar_chart_pos_neg <- function(label, value, max_value = 1, height = "16px",
 #'
 compare_country_metric <- function(prev_year = 2019, curr_year = 2020,
                                    country = NULL,
-                          metrics = c("population", "life_expectancy", "gdp_per_capita", "unemployment",
-                                      "imports_gs", "exports_gs"),
-                          bar_ratio = 1, page_size = 10, country_band = FALSE) {
+                                   metrics = c("population", "life_expectancy", "gdp_per_capita", "unemployment",
+                                               "imports_gs", "exports_gs"),
+                                   bar_ratio = 1, page_size = 10, country_band = FALSE) {
   if (is.null(country)) {
     country <- c("United States", "China", "Japan", "Germany", 
                  "United Kingdom", "India")
@@ -666,7 +670,7 @@ compare_country_metric <- function(prev_year = 2019, curr_year = 2020,
     country %in% "United Kingdom" ~ "영국",
     country %in% "India" ~ "인도") %>%
     sort()
-    
+  
   band <- country_nm[!(seq(length(country_nm)) %% 2)]
   if (!country_band) {
     band <- NULL
@@ -684,61 +688,31 @@ compare_country_metric <- function(prev_year = 2019, curr_year = 2020,
       country_name %in% "United Kingdom" ~ "영국",
       country_name %in% "India" ~ "인도"
     )) %>%
-    arrange(country_name, year) %>%
-    group_by(country_name) %>%
-    mutate(
-      prev_n_user = round(lag(n_user) / nday_prev),
-      curr_n_user = round(n_user / nday_curr),
-      prev_n_session = round(lag(n_session) / nday_prev),
-      curr_n_session = round(n_session / nday_curr),
-      prev_n_newuser = round(lag(n_newuser) / nday_prev),
-      curr_n_newuser = round(n_newuser / nday_curr),
-      prev_n_newsession = round(lag(n_newsession) / nday_prev),
-      curr_n_newsession = round(n_newsession / nday_curr),
-      prev_timeonsite = round(lag(timeonsite) / lag(n_session)),
-      curr_timeonsite = round(timeonsite / n_session),
-      prev_newsession_rate = round(lag(n_newsession) / lag(n_session) * 100),
-      curr_newsession_rate = round(n_newsession / n_session * 100)
-    ) %>%
-    select(platform, prev_n_user:curr_newsession_rate) %>%
-    filter(!is.na(prev_n_user)) %>%
-    mutate(profit_n_user = (curr_n_user - prev_n_user) / prev_n_user,
-           profit_n_session = (curr_n_session - prev_n_session) / prev_n_session,
-           profit_n_newuser = (curr_n_newuser - prev_n_newuser) / prev_n_newuser,
-           profit_n_newsession = (curr_n_newsession - prev_n_newsession) / prev_n_newsession,
-           profit_timeonsite = (curr_timeonsite - prev_timeonsite) / prev_timeonsite,
-           profit_newsession_rate = (prev_newsession_rate - curr_newsession_rate) /
-             curr_newsession_rate) %>%
-    select(platform, contains(metrics)) %>%
-    ungroup()
-  
-  tab <- tab %>%
-    select(platform, contains("prev_")) %>%
-    rename_all(function(x) sub("prev_", "", x)) %>%
-    tidyr::gather(key = "metric", value = "prev", -platform) %>%
-    inner_join(
-      tab %>%
-        select(platform, contains("curr_")) %>%
-        rename_all(function(x) sub("curr_", "", x)) %>%
-        tidyr::gather(key = "metric", value = "curr", -platform),
-      by = c("platform", "metric")
-    ) %>%
-    inner_join(
-      tab %>%
-        select(platform, contains("profit_")) %>%
-        rename_all(function(x) sub("profit_", "", x)) %>%
-        tidyr::gather(key = "metric", value = "profit", -platform),
-      by = c("platform", "metric")
-    ) %>%
+    arrange(country_name, year) %>% 
+    mutate(population = population / 1e6) %>% 
+    tidyr::pivot_longer(
+      population:exports_gs,
+      names_to = "metric",
+      values_to = "value"
+    ) %>% 
     mutate(metric = case_when(
-      metric %in% "n_user" ~ "일평균 사용자수",
-      metric %in% "n_session" ~ "일평균 세션수",
-      metric %in% "n_newuser" ~ "일평균 신규 사용자수",
-      metric %in% "n_newsession" ~ "일평균 신규 세션수",
-      metric %in% "newsession_rate" ~ "신규세션 비율",
-      metric %in% "timeonsite" ~ "평균 세션시간(초)"
-    )) %>%
-    arrange(platform)
+      metric %in% "gdp_per_capita" ~ "인당 GDP",
+      metric %in% "imports_gs" ~ "상품/서비스 수입",
+      metric %in% "exports_gs" ~ "상품/서비스 수출",
+      metric %in% "unemployment" ~ "실업률",
+      metric %in% "population" ~ "인구(백만명)",
+      metric %in% "life_expectancy" ~ "기대수명")
+    ) %>% 
+    mutate(year = case_when(
+      year == prev_year ~ "prev",
+      year == curr_year ~ "curr"
+    )) %>% 
+    tidyr::pivot_wider(
+      names_from = "year",
+      values_from = "value"
+    ) %>% 
+    mutate(profit = (curr - prev) / prev)
+  
   
   tab %>% reactable(
     bordered = TRUE,
@@ -751,15 +725,17 @@ compare_country_metric <- function(prev_year = 2019, curr_year = 2020,
     ),
     rowStyle = function(index) {
       if (index == 2) list(fontWeight = "bold")
-      else if (tab[index, "platform"] %in% band)
+      else if (tab[index, "country_name"] %in% band)
         list(background = "rgba(255, 165, 0, 0.05)")
     },
     columns = list(
-      platform = colDef(name = "플랫폼", minWidth = 70),
-      metric = colDef(name = "KPIs", minWidth = 120),
-      prev = colDef(name = prev_year, format = colFormat(separators = TRUE),
+      country_name = colDef(name = "국가", minWidth = 70),
+      metric = colDef(name = "지표", minWidth = 120),
+      prev = colDef(name = as.character(prev_year), 
+                    format = colFormat(separators = TRUE, digits = 2),
                     minWidth = 70),
-      curr = colDef(name = curr_year, format = colFormat(separators = TRUE),
+      curr = colDef(name = as.character(curr_year), 
+                    format = colFormat(separators = TRUE, digits = 2),
                     minWidth = 70),
       profit = colDef(
         name = "증감비율 (%)",
@@ -774,6 +750,3 @@ compare_country_metric <- function(prev_year = 2019, curr_year = 2020,
     )
   )
 }
-
-
-
