@@ -1,7 +1,7 @@
 ---
-title: "민원 상담콜 분석"
+title: "통화내역 데이터 탐색"
 description: |
-  상담센터의 상담콜 음성 데이터를 텍스트로 변환한 STT 데이터로 상담 콜을 이해하고, 민원을 유발하는 상담 콜을 예측해 봅니다.
+  상담센터의 통화 텍스트로 상담 콜을 이해하고, 민원을 유발하는 통화를 예측해 봅니다.
 site: distill::distill_website
 output:
   distill::distill_article:
