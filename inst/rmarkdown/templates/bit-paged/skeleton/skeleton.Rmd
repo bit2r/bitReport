@@ -19,7 +19,8 @@ author:
     email: <contact2email@email.com>
 
 output: 
-  bitReport::bitR_orange_paged: 
+    # bitReport::bitR_blue_paged 템플리트는 파란색 디자인 템플리트도 사용 가능함
+  bitReport::bitR_blue_paged: 
     # 커버 페이지의 백그라운드 이미지
     front_cover: img/cover.jpg
     # 뒷커버 페이지의 백그라운드 이미지

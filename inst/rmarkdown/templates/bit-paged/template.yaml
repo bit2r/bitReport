@@ -1,4 +1,4 @@
-name: "bitR paged report"
+name: "bitReport paged report"
 description: >
    Create a paged report of the bitR brand.
 create_dir: FALSE

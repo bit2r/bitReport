@@ -21,7 +21,6 @@ output:
 ```{r packages, echo=FALSE, message=FALSE, warning=FALSE}
 library(dplyr)
 library(readr)
-library(hlireport)
 library(ggplot2)
 library(emo)
 ```
@@ -31,12 +30,12 @@ library(emo)
 
 .pull-left-wide[
 **Q - GIS 분석 모델의 가능성은 무엇인가요?**  
-- EDA와 분석 모델을 통해서 **9개의 테마에서 여러 변수가 지점의 수익에 유의한 영향**을 끼친다는 사실 확인.
-- 특정 연령, 특정 상품이 수익과 밀접하다는 사실을 통해, **GIS 정보가 '보험 마케팅 전략' 수립 영역에서도 활용 가능**하다는 사실 확인.
+- EDA와 분석 모델을 통해서 **9개의 테마에서 여러 변수가 수익에 유의한 영향**을 끼친다는 사실 확인.
+- 특정 연령, 특정 상품이 수익과 밀접하다는 사실을 통해, **GIS 정보가 '마케팅 전략' 수립 영역에서도 활용 가능**하다는 사실 확인.
 
 **Q - GIS 분석 모델의 활용 방안은 무엇인가요?**  
-- GIS 기반의 다양한 데이터를 활용한다면, **고도화된 최적 입지선정 모델**의 개발 가능성 확인
-- 모델이 정교하된다면, **지점장의 KPI 척도나 목표치 달성 플랜** 등 지점의 운영 방향과 성장 가능성에 대한 정보 제공 가능
+- GIS 기반의 다양한 데이터를 활용한다면, **고도화된 최적 가맹점 입지선정 모델**의 개발 가능성 확인
+- 모델이 정교하된다면, **점장의 KPI 척도나 목표치 달성 플랜** 등 가맹점의 운영 방향과 성장 가능성에 대한 정보 제공 가능
 
 ]
 
@@ -218,7 +217,8 @@ ggplot(student_survey, aes(x = first_kiss)) +
   labs(
     title = "몇살 때 첫 키스를 했습니까?", 
     x = "Age (years)", y = NULL
-    )
+    ) +
+  theme_minimal(base_family = "NanumSquare")
 ```
 
 ---
@@ -235,7 +235,8 @@ ggplot(student_survey, aes(x = fb_visits_per_day)) +
   labs(
     title = "하루에 페이스북을 몇 번이나 방문나요?", 
     x = "Number of times", y = NULL
-    )
+    ) +
+  theme_minimal(base_family = "NanumSquare")  
 ```
 
 ---

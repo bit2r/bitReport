@@ -1,5 +1,5 @@
-name: "통화 텍스트 분석"
-title: "통화 텍스트 분석"
+name: "샘플 웹 사이트"
+title: "샘플 웹 사이트"
 description: |
   My Website
 output_dir: "docs"
@@ -7,8 +7,8 @@ navbar:
   right:
     - text: "Home"
       href: index.html
-    - text: "통화내역 데이터 탐색"
-      href: discovery_documents.html
+    - text: "샘플 웹 사이트 개발하기"
+      href: create_website.html
     - text: "텍스트 기반 이진분류 모형"
       menu:
         - text: "LASSO 모형기반 민원 예측"

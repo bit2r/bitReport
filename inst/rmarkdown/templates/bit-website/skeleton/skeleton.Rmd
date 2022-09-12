@@ -1,7 +1,7 @@
 ---
-title: "상담 내역 STT 데이터 탐색"
+title: "샘플 웹 사이트 개발하기"
 description: |
-  텍스트 분석의 실마리를 찾기 위해서 상담 내역 텍스트 데이터를 탐색합니다. 여기에는 데이터의 품질을 보정하기 위한 관점도 포함되어 있습니다.
+  텍스트 분석의 실마리를 찾기 위해서 텍스트 데이터를 탐색합니다. 여기에는 데이터의 품질을 보정하기 위한 관점도 포함되어 있습니다.
 author:
   - name: 유충현 
     url: https://choonghyunryu.github.io/
@@ -46,8 +46,8 @@ knitr::include_graphics("img/text.jpg")
 ```{r, preface, echo=FALSE}
 div(class = "preface", 
     h4("들어가기"),
-    "STT Text 데이터는 데이터 품질 수준이 낮습니다.", br(),
-    "그래서 다른 텍스트 데이터보다 더 많은 NLP 작업이 요구됩니다. 그리고 이 작업은 텍스트를 탐색하는 것으로부터 시작됩니다.")
+    "이 웹 사이트는 예제를 위해서 만든 간단한 사이트입니다.", br(),
+    "여러분은 이 Skelton 사이트에 살을 붙여서 자신의 웹 사이트를 만들 수 있습니다. 그리고 이 작업은 사이트의 구조를 이해하는 것으로부터 시작됩니다.")
 ```
 
 <br>
@@ -56,7 +56,7 @@ div(class = "preface",
 
 ### 수정해야할 사항
 
-본 템플리트는 웹 사이트 중의 한 페이지로 **discovery_documents.Rmd**라는 이름의 예제입니다. 환경 설정파일인 `_site.yml`에 "상담 내역 STT 데이터 탐색"이라는 제목으로 연결되어 있습니다. 만약에 예제 템플리트를 완성하려면 이 페이지의 이름을 `_site.yml`에서의 **discovery_documents**과 동일하게 설정해야 합니다.
+본 템플리트는 웹 사이트 중의 한 페이지로 **bitReport website**라는 이름의 예제입니다. 환경 설정파일인 `_site.yml`에 "샘플 웹 사이트"이라는 제목으로 연결되어 있습니다. 만약에 예제 템플리트를 완성하려면 이 페이지의 이름을 `_site.yml`에서의 **create_website**과 동일하게 설정해야 합니다.
 
 ### 웹 사이트 구성 파일
 
@@ -97,27 +97,31 @@ _site.yml 파일에서의 사용자가 설정해야할 항목은 다음과 같�
     - toc: 목차를 출력할 지의 여부를 정의합니다. true이면 출력합니다.
     - toc_depth: 출력할 목차의 depth를 정의합니다. 3이면 3 depth까지 표시합니다.  
 
-## Data: callDocs
+> 이 예제 웹 사이트는 하나의 완성된 페이지를 만드는 것이 아닌, 가상의 site를 담은 Skelton만 제공합니다. 그러므로 개별 페이지의 내용에 신경쓸 필요가 없습니다.
 
-`callDocs`은 민원분석을 위한 가상의 데이터입니다.
+## Data: USArrests
 
-이 데이터셋은 2개의 변수와 XXX,XXX개의 관측치로 구성된 티블(tibble) 객체입니다.:
+`USArrests`는 미국 주별 강력 범죄율을 기록한 데이터입니다.
 
-* doc
-    - character. 상담내용의 텍스트. 
-* flag
-    - numeric. 민원 발생 여부. 1-발생, 0-미발생.
+이 데이터셋은 4개의 변수와 50개의 관측치로 구성된 데이터 프레임(data.frame) 객체입니다.:
+
+* Murder
+    - numeric. 살인범 검거 건수(100,000건당)
+* Assault
+    - numeric. 폭행범 검거 건수(100,000건당)
+* UrbanPop
+    - numeric. 도시 인구 비율(백분율)
+* Rape
+    - numeric. 강간범 검거 건수(100,000건당)    
 
 
 ```{r import_data, warning=FALSE}
 # code here
 ```
 
-## 텍스트 데이터 초벌 정제
+## 표(tables) 출력
 
-`glimpse` 함수의 결과를 보면 "예"처럼 대답을 위한 감탄사 등 한개의 어절로 구성된 단어(words)가 많습니다. 그리고 구두점이 "." 대신에 "^"로 표현되어 있습니다.
-
-일부가 아니라, 첫 번째 상담내역 STT 전문을 살펴봅니다.
+미국 주별 강력 범죄율을 기록한 데이터인 USArrests를 표로 출력합니다.
 
 ```{r, usa-arrests}
 USArrests %>% 
@@ -139,15 +143,14 @@ USArrests %>%
 ```
 
 
-## 이미지 출력
-
-`glimpse` 함수의 결과를 보면 "예"처럼 대답을 위한 감탄사 등 한개의 어절로 구성된 단어(words)가 많습니다. 그리고 구두점이 "." 대신에 "^"로 표현되어 있습니다.
-
-일부가 아니라, 첫 번째 상담내역 STT 전문을 살펴봅니다.
+## 플롯(plots) 출력
 
 이 예제는 가상의 설명을 포함하고 있는, 그저 템플리트를 위한 예제입니다. 
 
+온도에 따른 수은의 증기압을 기록한 데이터인 pressure 데이터 프레임을 산점도록 시각화합니다.
+
 ```{r plot-density, fig.height=5, fig.width=7, warning=FALSE, fig.cap="플롯 예제"}
-plot(pressure)
+plot(pressure, pch = 16, main = "Relation between temperature and pressure")
+lines(loess(pressure ~ temperature, pressure), col = "steelblue")
 ```
 
