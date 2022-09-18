@@ -1,7 +1,7 @@
 ---
 title: "텍스트 데이터에서 화자의 의도 파악하기"
 subtitle: " - 사례를 중심으로<br><br>"
-author: "[유충현](https://www.hanwhalife.com/)"
+author: "[유충현](https://choonghyunryu.github.io/)"
 output:
   xaringan::moon_reader:
     self-contained: true
