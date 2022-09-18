@@ -5,10 +5,10 @@ description: |
 author:
   - name: 유충현 
     url: https://choonghyunryu.github.io/
-    affiliation: DataAnalytics팀
+    affiliation: 한국 R 사용자회
     affiliation_url: https://www.hanwhalife.com/index.jsp
   - name: 홍길동 
-    affiliation: DataAnalytics팀
+    affiliation: 한국 R 사용자회
     affiliation_url: https://www.hanwhalife.com/index.jsp    
 date: "`r Sys.Date()`"
 output: 
