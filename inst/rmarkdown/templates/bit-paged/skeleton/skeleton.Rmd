@@ -14,9 +14,6 @@ author:
   - name: 홍길동
     affiliation: 한국 R 사용자회
     email: <contact1email@email.com>
-  - name: 전우치
-    affiliation: 한국 R 사용자회
-    email: <contact2email@email.com>
 
 output: 
     # bitReport::bitR_blue_paged 템플리트는 파란색 디자인 템플리트도 사용 가능함
@@ -26,7 +23,7 @@ output:
     # 뒷커버 페이지의 백그라운드 이미지
     # orange 테마 경우는 backcover_orange.png, blue 테마 경우는 backcover_blue.png    
     # 아니면 사용자의 백드라운드 이미지를 사용합니다.
-    back_cover: img/backcover_orange.png    
+    back_cover: img/backcover_blue.png    
     # 목차를 제거하려면 false로 변경하십시오.
     toc: true
     # 챕터 앞에 숫자를 추가하려면 true로 변경하십시오.
@@ -167,7 +164,7 @@ htmltools::includeCSS("prams.css")
 
 # Template
 
-::: {.lead .bit-grey}
+::: {.lead .custom-grey}
 이 R 마크다운 템플릿 문서에는 bitR 브랜드 보고서^[유엔난민기구(UNHCR, United Nations High Commissioner for Refugees) 브랜드 보고서를 참조하여 만들었습니다.]를 작성하는 데 필요한 모든 기능과 스타일이 포함되어 있습니다.
 :::
 
@@ -221,7 +218,7 @@ chrome_print()가 Chrome 또는 Chromium을 자동으로 찾을 수 없는 경�
 
 # 타이포그라피
 
-::: {.lead .bit-grey}
+::: {.lead .custom-grey}
 전역 설정, 머리글, 본문, 목록 등을 포함한 타이포그라피에 대한 문서 및 예제
 :::
 
@@ -268,13 +265,13 @@ chrome_print()가 Chrome 또는 Chromium을 자동으로 찾을 수 없는 경�
 
 **Example:**
 
-:::{.bit-blue}
-[h1 제목]{style="font-size: 2.5em;color: var(--bit-orange);"}
+:::{.custom-blue}
+[h1 제목]{style="font-size: 2.5em;color: var(--bit-blue);"}
 
-[h2 제목]{style="font-size: 2em;color: var(--bit-orange);"}
+[h2 제목]{style="font-size: 2em;color: var(--bit-blue);"}
 :::
 
-[h3 제목]{style="font-size: 1.75em; font-weight: 700;color: var(--bit-orange);"}
+[h3 제목]{style="font-size: 1.75em; font-weight: 700;color: var(--bit-blue);"}
 
 #### h4 제목
 
@@ -443,7 +440,7 @@ Markdown에서 글머리 기호 목록(lists)을 만들려면 **더하기 기호
 
 # 이미지, 플롯 및 테이블
 
-::: {.lead .bit-grey}
+::: {.lead .custom-grey}
 이 섹션에서는 이미지, 플롯 및 표를 삽입하기 위한 모든 지침을 제공합니다.
 :::
 
@@ -606,7 +603,7 @@ knitr::kable(usa_crime,
              format = "html",
              col.names = c('주 이름', '살인범수 (10만명당)', '폭행범수 (10만명당)', 
                            '도시인구 비율 (%)', '강간범수 (10만명당)'),
-             format.args = list(big.mark = ",", digit = 0, scientific = FALSE),
+             format.args = list(big.mark = ",", scientific = FALSE),
              caption = "미국 주별 강력 범죄율")
 ```
 
@@ -616,7 +613,7 @@ knitr::kable(usa_crime,
              format = "html",
              col.names = c('주 이름', '살인범수 (10만명당)', '폭행범수 (10만명당)', 
                            '도시인구 비율 (%)', '강간범수 (10만명당)'),
-             format.args = list(big.mark = ",", digit = 0, scientific = FALSE),
+             format.args = list(big.mark = ",", scientific = FALSE),
              caption = "미국 주별 강력 범죄율")
 ```
 
@@ -639,23 +636,23 @@ knitr::kable(usa_crime,
 
 ```{r table-class, echo=FALSE, message=FALSE, warning=FALSE}
 knitr::kable(usa_crime,
-             table.attr = "class=\"table table-striped-orange table-width\"",
+             table.attr = "class=\"table table-striped-blue table-width\"",
              format = "html",
-             format.args = list(big.mark = ",", digit = 0, scientific = FALSE),
+             format.args = list(big.mark = ",", scientific = FALSE),
              caption = "미국 주별 강력 범죄율")
 ```
 
 ```{r table-class-code, include=TRUE, eval=FALSE}
 knitr::kable(usa_crime,
-             table.attr = "class=\"table table-striped-orange table-width\"",
+             table.attr = "class=\"table table-striped-blue table-width\"",
              format = "html",
-             format.args = list(big.mark = ",", digit = 0, scientific = FALSE),
+             format.args = list(big.mark = ",", scientific = FALSE),
              caption = "미국 주별 강력 범죄율")
 ```
 
 # Helper 클래스
 
-::: {.lead .bit-grey}
+::: {.lead .custom-grey}
 **CSS `.class` 시리즈**는 레이아웃에 유연성을 제공하고 반복적인 스타일 요구사항을 단순화합니다.
 :::
 
@@ -663,32 +660,32 @@ knitr::kable(usa_crime,
 
 **Example:**
 
-:::{.bit-orange}
+:::{.custom-orange}
 화단에 무궁화 꽃이 활짝 피었습니다.
 :::
 
-화단에 [무궁화 꽃]{.bit-orange}이 활짝 피었습니다.
+화단에 [무궁화 꽃]{.custom-orange}이 활짝 피었습니다.
 
 ```{r helper, include=TRUE, eval=FALSE}
 # Fenced divs
-:::{.bit-orange}
+:::{.custom-orange}
 화단에 무궁화 꽃이 활짝 피었습니다.
 :::
 
 # Bracketed spans
-화단에 [무궁화 꽃]{.bit-orange}이 활짝 피었습니다.
+화단에 [무궁화 꽃]{.custom-orange}이 활짝 피었습니다.
 ```
 
 ## 글자 색상
 
-`.bit-orange`, `.bit-blue` 또는 `.bit-grey` 클래스를 추가하면 bitR 브랜드 색상을 텍스트 요소에 적용할 수 있습니다. 앞서 언급했듯이 이것은 분리된 div와 인라인 요소 모두 적용됩니다.
+`.custom-orange`, `.custom-blue` 또는 `.custom-grey` 클래스를 추가하면 bitR 브랜드 색상을 텍스트 요소에 적용할 수 있습니다. 앞서 언급했듯이 이것은 분리된 div와 인라인 요소 모두 적용됩니다.
 
 **Example:**
 
-[파란색]{.bit-blue}, [오렌지색]{.bit-orange}, [회색]{.bit-grey}으로 표현됩니다. **[bold]{.bit-blue}**처럼 다른 인라인 스타일과 혼합이 가능합니다.
+[파란색]{.custom-blue}, [오렌지색]{.custom-orange}, [회색]{.custom-grey}으로 표현됩니다. **[bold]{.custom-blue}**처럼 다른 인라인 스타일과 혼합이 가능합니다.
 
 ```{r text-color, include=TRUE, eval=FALSE}
-[파란색]{.bit-blue}, [오렌지색]{.bit-orange}, [회색]{.bit-grey}으로 표현됩니다. **[bold]{.bit-blue}**처럼 다른 인라인 스타일과 혼합이 가능합니다.
+[파란색]{.custom-blue}, [오렌지색]{.custom-orange}, [회색]{.custom-grey}으로 표현됩니다. **[bold]{.custom-blue}**처럼 다른 인라인 스타일과 혼합이 가능합니다.
 ```
 
 :::{.page-break}
@@ -700,7 +697,7 @@ knitr::kable(usa_crime,
 
 **Example:**
 
-:::{.bg-orange}
+:::{.bg-blue}
 대법원장과 대법관이 아닌 법관의 임기는 10년으로 하며, 법률이 정하는 바에 의하여 연임할 수 있다. 모든 국민은 사생활의 비밀과 자유를 침해받지 아니한다.
 법원은 최고법원인 대법원과 각급법원으로 조직된다. 여자의 근로는 특별한 보호를 받으며, 고용·임금 및 근로조건에 있어서 부당한 차별을 받지 아니한다.
 :::
@@ -714,7 +711,7 @@ knitr::kable(usa_crime,
 
 ```{r bg-color, include=TRUE, eval=FALSE}
 # Blue example
-:::{.bg-orange}
+:::{.bg-blue}
 대법원장과 대법관이 아닌 법관의,...
 :::
   
@@ -808,14 +805,6 @@ knitr::kable(usa_crime,
 한국 R 사용자회
 
 [contact1email@email.com](mailto:contact1email@email.com)
-:::
-
-::: {.back-contact}
-[전우치]{.back-name}
-
-한국 R 사용자회
-
-[contact2email@email.com](mailto:contact2email@email.com)
 :::
 
 :::

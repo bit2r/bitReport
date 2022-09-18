@@ -17,7 +17,7 @@
   --custom-lightorange: rgb(255, 204, 170); 
   --custom-orange-front: rgba(255, 230, 213, 0.9);
   --custom-yellow: rgb(250, 235, 0);
-  --cover-title-width: 30%;
+  --cover-title-width: 20%;
 }
 
 /*****
@@ -28,6 +28,7 @@ h6, h5, h4, h3, h2, h1 {
   margin-top: 0;
   margin-bottom: 0.5em;
   line-height: 1.2;
+  font-family: 'NanumSquare', sans-serif;    
 }
 
 h2, h1 {
