@@ -71,14 +71,14 @@ d-appendix {
   --text-color:       rgba(255, 255, 255, 0.8);
   --text-size:        15px;
   --hover-color:      white;
-  --bkgd-color:       var(--custom-orange);
+  --bkgd-color:       var(--custom-blue);
 }
 
 .distill-site-footer {
   --text-color:       rgba(255, 255, 255, 0.8);
   --text-size:        15px;
   --hover-color:      white;
-  --bkgd-color:       var(--custom-orange);
+  --bkgd-color:       var(--custom-blue);
 }
 
 /*-- Additional custom styles --*/
@@ -86,7 +86,7 @@ d-appendix {
 
 .preface {
   font-size: 11pt;
-  background-color: var(--custom-lightorange);
+  background-color: var(--custom-lightblue);
   margin-top: 1em;
   margin-bottom: 0.5em;
   padding: 1.5em;
@@ -96,7 +96,7 @@ d-appendix {
 
 h1 {
   font-size: 30px !important;
-  color: var(--custom-orange) !important;
+  color: var(--custom-blue) !important;
   font-family: NanumSquare !important;
   margin-top: 15px !important;
   padding-top: 15px !important;
@@ -106,7 +106,7 @@ h1 {
 
 h2 {
   font-size: 25px !important;
-  color: var(--custom-orange) !important;
+  color: var(--custom-blue) !important;
   font-family: NanumSquare !important;
   padding-top: 15px !important;
   margin-top: 15px !important;
@@ -117,7 +117,7 @@ h2 {
 
 h3 {
   font-size: 20px !important;
-  color: var(--custom-orange) !important;
+  color: var(--custom-blue) !important;
   font-family: NanumSquare !important;
   margin-top: 10px !important;
   margin-bottom: 10px !important;
@@ -156,9 +156,9 @@ h3 {
 
 .panelset {
   --panel-tab-foreground: currentColor !important;
-  --panel-tab-active-foreground: var(--custom-orange) !important;
-  --panel-tab-active-background: var(--custom-lightorange) !important;
-  --panel-tab-hover-foreground: var(--custom-orange) !important;
+  --panel-tab-active-foreground: var(--custom-blue) !important;
+  --panel-tab-active-background: var(--custom-lightblue) !important;
+  --panel-tab-hover-foreground: var(--custom-blue) !important;
   --panel-tabs-border-bottom: #ddd !important;
   --panel-tab-inactive-opacity: 0.5 !important;
 }
