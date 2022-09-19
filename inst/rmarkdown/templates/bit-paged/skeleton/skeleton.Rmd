@@ -33,11 +33,11 @@ output:
 # 목차의 제목 설정, 기본값 없음
 toc-title: Contents
 # 테이블 목록을 제거하려면 false로 변경하십시오
-lot: true
+lot: false
 # 테이블 목록의 제목 설정, 기본값은 "List of Tables"
 lot-title: "Tables"
 # 그림 목록을 제거하려면 false로 변경하십시오.
-lof: true
+lof: false
 # 그림 목록의 제목 설정, 기본값은 "List of Figures"
 lof-title: "Figures"
 # 문서에 <abbr>을 포함하면 약어 목록이 작성됩니다.
