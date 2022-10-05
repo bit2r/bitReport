@@ -36,7 +36,7 @@ html {
   --fig-cap-color:   rgba(0, 0, 0, 0.6);
   /*-- Specify custom fonts ~~~ must be imported above   --*/
   --heading-font:    sans-serif;
-  --mono-font:       monospace;
+  --mono-font:       D2Coding;
   --body-font:       sans-serif;
   --navbar-font:     sans-serif;  /* websites + blogs only */
 }
