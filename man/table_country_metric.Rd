@@ -4,12 +4,14 @@
 \alias{table_country_metric}
 \title{국가 통계의 집계 테이블 출력}
 \usage{
-table_country_metric(base_year = 2020, country = NULL)
+table_country_metric(base_year = 2020, country = NULL, style = NULL)
 }
 \arguments{
 \item{base_year}{character. 통계 년도.}
 
 \item{country}{character. 시각화할 국가 이름.}
+
+\item{style}{list. 테이블의 스타일 정의.}
 }
 \description{
 table_country_metric()는 국가의 메트릭을 플롯을 포함한 테이블로 표현한다.

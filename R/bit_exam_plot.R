@@ -22,7 +22,7 @@ gradient_color <- function(x) {
 #' @import reactable
 #' @import dplyr
 #' @export
-plot_edu_metric <- function() {
+plot_edu_metric <- function(style = NULL) {
   tab <- customer_personality %>% 
     group_by(Education) %>% 
     summarise(
@@ -34,9 +34,13 @@ plot_edu_metric <- function() {
       response_color = gradient_color(pct_response)
     ) 
   
+  if (is.null(style)) {
+    style = list(fontFamily = "NanumSquare")
+  }
+  
   tab %>% 
     reactable(
-      style = list(fontFamily = "NanumSquare"),
+      style = style,
       highlight = TRUE,
       outlined = TRUE,
       defaultColDef = colDef(
@@ -129,7 +133,7 @@ bar_chart_pos_neg <- function(label, value, max_value = 1, height = "16px",
 #' @import dplyr
 #' @import reactable
 #' @importFrom tidyr pivot_wider pivot_longer
-plot_edu_increse <- function(bar_ratio = 1, page_size = 20) {
+plot_edu_increse <- function(bar_ratio = 1, page_size = 20, style = NULL) {
   tab <- customer_personality %>% 
     mutate(yearmonth = substr(Dt_Customer, 1, 7)) %>% 
     group_by(Education, yearmonth) %>% 
@@ -152,11 +156,15 @@ plot_edu_increse <- function(bar_ratio = 1, page_size = 20) {
     mutate(profit = round(`2014-06` - `2014-05`) / `2014-05`) %>% 
     ungroup()
   
+  if (is.null(style)) {
+    style = list(fontFamily = "NanumSquare")
+  }
+  
   tab %>% reactable(
     bordered = TRUE,
     highlight = TRUE,
     striped = TRUE,
-    style = list(fontFamily = "NanumSquare"),
+    style = style,
     defaultPageSize = page_size,
     defaultColDef = colDef(
       headerStyle = list(background = "#f7f7f8")
@@ -375,6 +383,7 @@ bar_chart <- function(label, width = "100%", height = "16px", fill = "#00bfc4",
 #'
 #' @param base_year character. 통계 년도.
 #' @param country character. 시각화할 국가 이름.
+#' @param style list. 테이블의 스타일 정의.
 #' @details
 #' country 종류는 다음과 같다.
 #' \itemize{
@@ -396,7 +405,7 @@ bar_chart <- function(label, width = "100%", height = "16px", fill = "#00bfc4",
 #' @importFrom reactable reactable colDef reactableTheme
 #' @importFrom htmlwidgets JS
 #' @export
-table_country_metric <- function(base_year = 2020, country = NULL) {
+table_country_metric <- function(base_year = 2020, country = NULL, style = NULL) {
   metrics <- c("population", "life_expectancy", "gdp", "gdp_per_capita", "gdp_growth")
   
   if (is.null(country)) {
@@ -423,9 +432,13 @@ table_country_metric <- function(base_year = 2020, country = NULL) {
            gdp_growth, gdp_growth_color) %>%
     arrange(country_name)
   
+  if (is.null(style)) {
+    style = list(fontFamily = "NanumSquare")
+  }
+  
   tab %>%
     reactable(
-      style = list(fontFamily = "NanumSquare"),
+      style = style,
       highlight = TRUE,
       outlined = TRUE,
       defaultColDef = colDef(
