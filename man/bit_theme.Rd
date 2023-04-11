@@ -2,7 +2,7 @@
 % Please edit documentation in R/bit_ggplot_theme.R
 \name{bit_theme}
 \alias{bit_theme}
-\title{Basic HLI theme for ggplot2}
+\title{Basic bitR theme for ggplot2}
 \usage{
 bit_theme(
   base_family = "NanumSquare",
@@ -79,7 +79,7 @@ Recommendations use 11 for print and 16 for web}
 \item{ticks}{ticks if `TRUE` add ticks}
 }
 \description{
-\code{bit_theme} provides a basic \bold{HLI} theme
+\code{bit_theme} provides a basic \bold{bitR} theme
 to use in \bold{ggplot2} commands.
 }
 \examples{

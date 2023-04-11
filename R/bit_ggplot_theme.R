@@ -28,11 +28,11 @@ theme_foundation <- function(base_size=12, base_family="") {
 
 #' @name bit_theme
 #' @rdname bit_theme
-#' @title  Basic HLI theme for ggplot2
+#' @title  Basic bitR theme for ggplot2
 #' @export bit_theme
 #' @author ipda | unhcr.org | 2020
 #'
-#' @description  \code{bit_theme} provides a basic \bold{HLI} theme
+#' @description  \code{bit_theme} provides a basic \bold{bitR} theme
 #' to use in \bold{ggplot2} commands.
 #'
 #' @param base_family Base font family (optional, character).
@@ -296,7 +296,7 @@ bit_discrete <- function() {
 
 #' @name bit_scale_colour_discrete
 #' @rdname bit_scale_colour_discrete
-#' @title  Discrete color scales based on the HLI graphic palette
+#' @title  Discrete color scales based on the bitR graphic palette
 #' @export bit_scale_colour_discrete
 #' @author ipda | unhcr.org | 2020
 #' @description See [bit_discrete()].
@@ -315,7 +315,7 @@ bit_scale_colour_discrete <- function(...) {
 
 #' @name bit_scale_fill_discrete
 #' @rdname bit_scale_fill_discrete
-#' @title  Discrete  fill scales based on the HLI graphic palette
+#' @title  Discrete  fill scales based on the bitR graphic palette
 #' @export bit_scale_fill_discrete
 #' @author ipda | unhcr.org | 2020
 #' @description See [bit_discrete()].

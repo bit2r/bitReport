@@ -3,7 +3,7 @@
 \name{bit_scale_fill_discrete}
 \alias{bit_scale_fill_discrete}
 \alias{bit_scale_colour_discrete}
-\title{Discrete  fill scales based on the HLI graphic palette}
+\title{Discrete  fill scales based on the bitR graphic palette}
 \usage{
 bit_scale_fill_discrete(...)
 }

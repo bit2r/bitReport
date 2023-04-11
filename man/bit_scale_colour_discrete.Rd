@@ -3,7 +3,7 @@
 \name{bit_scale_colour_discrete}
 \alias{bit_scale_colour_discrete}
 \alias{bit_scale_color_discrete}
-\title{Discrete color scales based on the HLI graphic palette}
+\title{Discrete color scales based on the bitR graphic palette}
 \usage{
 bit_scale_colour_discrete(...)
 }
