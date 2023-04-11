@@ -526,8 +526,8 @@ air_passengers <- data.frame(
 single_line <- air_passengers %>% 
   mutate(date = as.Date(glue::glue("{year}-{month}-01"))) %>% 
   ggplot2::ggplot(aes(x = date, y = n_passenger)) +
-  geom_line(colour = bit_orange, size = 1) + # Define line chart color to bit_orange
-  geom_hline(yintercept = 0, size = 1, colour = bit_grey) + # Add major line at 0
+  geom_line(colour = bit_orange, linewidth = 1) + # Define line chart color to bit_orange
+  geom_hline(yintercept = 0, linewidth = 1, colour = bit_grey) + # Add major line at 0
   labs(title = "항공기 이용 승객 현황 1949 ~ 1960",
        subtitle = "국제선 항공기 이용고객의 월 집계",
        caption = "Source: The classic Box & Jenkins airline") +
@@ -552,8 +552,8 @@ multi_line <- air_passengers %>%
   mutate(date = as.Date(glue::glue("{year}-{month}-01")),
          year = factor(year)) %>%   
   ggplot2::ggplot(aes(x = month, y = n_passenger, colour = year)) +
-  geom_line(size = 1) + 
-  geom_hline(yintercept = 0, size = 1, colour = bit_grey) + # Add major line at 0
+  geom_line(linewidth = 1) + 
+  geom_hline(yintercept = 0, linewidth = 1, colour = bit_grey) + # Add major line at 0
   labs(title = "항공기 이용 승객 년도별 비교 1950/1960",
        subtitle = "국제선 항공기 이용고객의 월 집계",
        caption = "Source: The classic Box & Jenkins airline") +
