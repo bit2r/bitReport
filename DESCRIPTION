@@ -1,7 +1,8 @@
 Package: bitReport
 Type: Package
 Title: Template for R-based analysis report
-Version: 0.1.2.9000
+Version: 0.1.3.9000
+Date: 2023-04-12
 Authors@R: c(
   person("Choonghyun", "Ryu",, "choonghyun.ryu@gmail.com", role = c("aut", "cre"))
   )
