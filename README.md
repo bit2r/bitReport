@@ -61,6 +61,8 @@ RStudio에서 `File` \> `New File` \> `R markdown...` 메뉴를 선택하면
 다음처럼 bitReport 패키지의 Template를 선택할 수 있는 다이얼로그가
 출력됩니다.
 
+<br>
+
 <figure>
 <img src="man/figures/dialog.png" style="width:45.0%;height:60.0%"
 alt="R Markdown 템플리트 선택 다이얼로그" />
@@ -68,9 +70,13 @@ alt="R Markdown 템플리트 선택 다이얼로그" />
 다이얼로그</figcaption>
 </figure>
 
+<br>
+
 `bitReport paged report`를 선택한 후 리포트 이름을 입력합니다. 여기서는
 `exam_paged`라는 이름을 지정했습니다. `OK` 버튼을 누르면 다음처럼
 스크립트 창에 템플리트가 생성됩니다.
+
+<br>
 
 <figure>
 <img src="man/figures/template.png" style="width:60.0%"
@@ -78,10 +84,14 @@ alt="paged report 템플리트 내용" />
 <figcaption aria-hidden="true">paged report 템플리트 내용</figcaption>
 </figure>
 
+<br>
+
 템플리트는 그 내용이 정적 리포트를 생성하는 Rmarkdown의 청크 관련
 학습서입니다.
 
 `Knit` 아이콘을 눌러 보고서를 생성합니다.
+
+<br>
 
 <figure>
 <img src="man/figures/paged_report.png" style="width:60.0%"
@@ -102,6 +112,8 @@ alt="생성된 웹 사이트" />
 <figcaption aria-hidden="true">생성된 웹 사이트</figcaption>
 </figure>
 
+<br>
+
 ### 동적 리포트 작성
 
 #### 슬라이드 생성
@@ -111,17 +123,23 @@ alt="생성된 웹 사이트" />
 
 생성된 예제 슬라이드는 다음과 같습니다.
 
+<br>
+
 <figure>
 <img src="man/figures/slide.png" style="width:60.0%"
 alt="생성된 슬라이드" />
 <figcaption aria-hidden="true">생성된 슬라이드</figcaption>
 </figure>
 
+<br>
+
 #### 대시보드 생성
 
 정적 리포트 작성과 같은 방법으로 대시보드를 생성합니다.
 
 대시보드도 일종의 웹 사이트로, 생성된 예제 대시보드는 다음과 같습니다.
+
+<br>
 
 <figure>
 <img src="man/figures/dashboard.png" style="width:60.0%"
