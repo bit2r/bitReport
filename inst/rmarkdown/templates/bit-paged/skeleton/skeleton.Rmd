@@ -88,10 +88,10 @@ if (is.null(logo_img)) {
 
 ## 문서 하단의 텍스트를 지정합니다.
 ## 지정하지 않으면, bitReport를 출력합니다.
-botoom_txt <- NULL
+buttom_txt <- NULL
 
-if (is.null(botoom_txt)) {
-  botoom_txt <- "bitReport"
+if (is.null(buttom_txt)) {
+  buttom_txt <- "bitReport"
 } 
 
 ## Back-Cover의 이미지를 지정합니다.
@@ -123,11 +123,11 @@ str_css <- paste0(
 }
 
 .pagedjs_page.pagedjs_named_page.pagedjs_chapter_page.pagedjs_left_page .pagedjs_margin-bottom-right>.pagedjs_margin-content::after {
-    content: '", botoom_txt, " / ' var(--pagedjs-string-first-date-text);
+    content: '", buttom_txt, " / ' var(--pagedjs-string-first-date-text);
 }
 
 .pagedjs_page.pagedjs_named_page.pagedjs_chapter_page.pagedjs_right_page .pagedjs_margin-bottom-left>.pagedjs_margin-content::after {
-    content: '", botoom_txt, " / ' var(--pagedjs-string-first-date-text);
+    content: '", buttom_txt, " / ' var(--pagedjs-string-first-date-text);
 }
 
 /* Warnings */
