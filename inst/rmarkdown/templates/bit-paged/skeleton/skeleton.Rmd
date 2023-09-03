@@ -114,11 +114,11 @@ str_css <- paste0(
 }
 
 .title {
-  color: {title_color};
+  color: ", title_color, ";
 }
 
 .subtitle {
-  color: {subtitle_color};
+  color: ", subtitle_color, ";
   font-size: 2.5em !important;  
 }
 
@@ -153,6 +153,16 @@ str_css <- paste0(
   background: hsl(350, 70%, 90%);
   color: hsl(350, 45%, 30%);
 }
+
+/* PDF 기본 폰트 설정 - 목차 및 header/footer, back-cover에 적용, #4 */
+/* Mac Slicon chip 환경에서 폰트 이슈시 아래 주석을 해제함 */
+/*
+@media print {
+ body {
+      font-family: Apple SD Gothic Neo;       
+  }
+}
+*/
 ")
 
 fileConn <- file("prams.css")
