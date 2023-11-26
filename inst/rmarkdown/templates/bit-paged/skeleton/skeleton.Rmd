@@ -21,9 +21,9 @@ output:
     # 커버 페이지의 백그라운드 이미지
     front_cover: img/cover.jpg
     # 뒷커버 페이지의 백그라운드 이미지
-    # orange 테마 경우는 backcover_orange.png, blue 테마 경우는 backcover_blue.png    
+    # orange 테마 경우는 backcover_orange.svg, blue 테마 경우는 backcover_blue.svg    
     # 아니면 사용자의 백드라운드 이미지를 사용합니다.
-    back_cover: img/backcover_blue.png    
+    back_cover: img/backcover_blue.svg    
     # 목차를 제거하려면 false로 변경하십시오.
     toc: true
     # 챕터 앞에 숫자를 추가하려면 true로 변경하십시오.

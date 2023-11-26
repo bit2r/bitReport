@@ -1,4 +1,22 @@
-# CHANGES IN R VERSION 0.1.4.9000:
+# CHANGES IN R VERSION 0.1.6.9000:
+
+## MINOR CHANGES:
+
+*  Paged report 템플리트 Backcover 이미지 계단현상 해결(#5)
+    - PNG 파일을 SVG 파일로 변경
+    
+    
+    
+# CHANGES IN R VERSION 0.1.5:
+
+## MINOR CHANGES:
+
+*  Mac Slicon chip 운영체제를 위한 Paged Report 폰트 설정 (#4)
+    - Paged Report Skeleton 160~164 라인 
+    
+    
+    
+# CHANGES IN R VERSION 0.1.4:
 
 ## MINOR CHANGES:
 
