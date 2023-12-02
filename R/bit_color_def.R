@@ -3,14 +3,14 @@
 ################################################################################
 
 
-#  bitR Brandbook ----
+#  dpxR Brandbook ----
 ## Color sources
 
 # Sources for color definitions:
 # https://media.unhcr.org/archive/Brand-Book-for-external-partners-2CZ7A2P0CGAY.html
 # https://media.unhcr.org/archive/Data-visualisation-colour-palette-2CZ7A2HOVFP9.html
 
-# Primary colors: The bitR logo blue should be used as a main colour as well as an accent colour in necessary circumstances.
+# Primary colors: The dpxR logo blue should be used as a main colour as well as an accent colour in necessary circumstances.
 
 # bit_pal -----
 
@@ -18,8 +18,8 @@
 #' @rdname bit_pal
 #' @title bit default (web/sRGB) Primary color palette
 #'
-#' @description bitR primary color palette. \code{bit_pal}
-#' provides the default bitR color palette
+#' @description dpxR primary color palette. \code{bit_pal}
+#' provides the default dpxR color palette
 #' as a data frame containing 11 colors.
 #'
 #' This is the primary (web/sRGB) scale.
@@ -45,8 +45,8 @@
 #' @family color palettes
 #'
 #' @seealso
-#' \code{\link{bit_pal_blue}} for the bitR default blue palette;
-#' \code{\link{bit_pal_primary}} for a bitR color palette with primary colors;
+#' \code{\link{bit_pal_blue}} for the dpxR default blue palette;
+#' \code{\link{bit_pal_primary}} for a dpxR color palette with primary colors;
 #' \code{\link{seecol}} to show color palettes;
 #' \code{\link{usecol}} to use color palettes.
 #'
@@ -74,12 +74,12 @@ bit_pal <- bit_pal[c(5:1, 11:6)] # blue (1 as default) > white (6) > grey > blac
 # bit_pal_orange -----
 #' @name bit_pal_orange
 #' @rdname bit_pal_orange
-#' @title bitR orange color palette
+#' @title dpxR orange color palette
 #'
 #' @description
 #' ORANGE:  PANTONE 300 C/U / CMYK 0 68 100 0
 #' RGB 243 115 33 / HEX #F37321
-#' \code{bit_pal_orange} 추가 bitR 색상 팔레트 제공
+#' \code{bit_pal_orange} 추가 dpxR 색상 팔레트 제공
 #' 6가지 색상을 포함하는 데이터 프레임 (shades of \code{\link{Orange}}).
 #'
 #' @examples {
@@ -100,9 +100,9 @@ bit_pal <- bit_pal[c(5:1, 11:6)] # blue (1 as default) > white (6) > grey > blac
 #' @family color palettes
 #'
 #' @seealso
-#' \code{\link{bit_pal}} 5가지 주요 색상이 있는 bitR 기본 색상 팔레트. \code{\link{bit_pal_orange}};
-#' \code{\link{bit_pal_darkblue}} bitR 색상 팔레트 대체 색상의 경우;
-#' \code{\link{bit_pal_primary}} 기본 색상이 있는 bitR 색상 팔레트의 경우;
+#' \code{\link{bit_pal}} 5가지 주요 색상이 있는 dpxR 기본 색상 팔레트. \code{\link{bit_pal_orange}};
+#' \code{\link{bit_pal_darkblue}} dpxR 색상 팔레트 대체 색상의 경우;
+#' \code{\link{bit_pal_primary}} 기본 색상이 있는 dpxR 색상 팔레트의 경우;
 #' \code{\link{seecol}} 팔래트 색상 보기;
 #' \code{\link{usecol}} 팔레트 색상 사용하기.
 #'
@@ -120,7 +120,7 @@ bit_pal_orange <- data.frame(                               #  element:
 # bit_orange -----
 #' @name bit_orange
 #' @rdname bit_orange
-#' @title bitR color orange
+#' @title dpxR color orange
 #'
 #' @description 기본 오렌지 색상 (HEX 값으로): #F37321
 #' \code{bit_orange}는 \code{\link{bit_pal_orange}}의 기본 색상을 제공하며,
@@ -135,9 +135,9 @@ bit_pal_orange <- data.frame(                               #  element:
 #' @family 선호 색상
 #'
 #' @seealso
-#' \code{\link{bit_pal_orange}} bitR 색상 팔레트 대체 색상의 경우;
-#' \code{\link{bit_pal}} 5가지 주요 색상이 있는 bitR 기본 색상 팔레트. \code{\link{bit_pal_orange}};
-#' \code{\link{bit_pal_primary}} 기본 색상이 있는 bitR 색상 팔레트의 경우;
+#' \code{\link{bit_pal_orange}} dpxR 색상 팔레트 대체 색상의 경우;
+#' \code{\link{bit_pal}} 5가지 주요 색상이 있는 dpxR 기본 색상 팔레트. \code{\link{bit_pal_orange}};
+#' \code{\link{bit_pal_primary}} 기본 색상이 있는 dpxR 색상 팔레트의 경우;
 #' \code{\link{seecol}} 팔래트 색상 보기;
 #' \code{\link{usecol}} 팔레트 색상 사용하기.
 #'
@@ -154,12 +154,12 @@ names(bit_orange) <- "Orange"
 # bit_pal_blue -----
 #' @name bit_pal_blue
 #' @rdname bit_pal_blue
-#' @title bitR blue color palette
+#' @title dpxR blue color palette
 #'
 #' @description
 #' BLUE:  PANTONE 300 C/U / CMYK 99 50 0 0
 #' RGB 0 114 188 / HEX #0072BC
-#' \code{bit_pal_blue} provides an additional bitR color palette
+#' \code{bit_pal_blue} provides an additional dpxR color palette
 #' as a data frame containing 6 colors (shades of \code{\link{Blue}}).
 #'
 #' See \url{https://media.unhcr.org/archive/Brand-Book-for-external-partners-2CZ7A2P0CGAY.html} for details.
@@ -186,9 +186,9 @@ names(bit_orange) <- "Orange"
 #' @family color palettes
 #'
 #' @seealso
-#' \code{\link{bit_pal}} for the bitR default color palette with 5 main colors of \code{\link{bit_pal_blue}};
-#' \code{\link{bit_pal_darkblue}} for an alternative blue bitR color palette;
-#' \code{\link{bit_pal_primary}} for a bitR color palette with primary colors;
+#' \code{\link{bit_pal}} for the dpxR default color palette with 5 main colors of \code{\link{bit_pal_blue}};
+#' \code{\link{bit_pal_darkblue}} for an alternative blue dpxR color palette;
+#' \code{\link{bit_pal_primary}} for a dpxR color palette with primary colors;
 #' \code{\link{seecol}} to show color palettes;
 #' \code{\link{usecol}} to use color palettes.
 #'
@@ -206,7 +206,7 @@ bit_pal_blue <- data.frame(                               #  element:
 # bit_blue -----
 #' @name bit_blue
 #' @rdname bit_blue
-#' @title bitR color blue
+#' @title dpxR color blue
 #'
 #' @description Preferred color blue (as HEX character value): ----
 #' \code{bit_blue} provides the preferred color of \code{\link{bit_pal_blue}}
@@ -225,8 +225,8 @@ bit_pal_blue <- data.frame(                               #  element:
 #'
 #' @seealso
 #' \code{\link{bit_pal_blue}} for the corresponding color palette;
-#' \code{\link{bit_pal}} for the bitR default color palette with 5 main colors of \code{\link{bit_pal_blue}};
-#' \code{\link{bit_pal_primary}} for a bitR color palette with primary colors;
+#' \code{\link{bit_pal}} for the dpxR default color palette with 5 main colors of \code{\link{bit_pal_blue}};
+#' \code{\link{bit_pal_primary}} for a dpxR color palette with primary colors;
 #' \code{\link{seecol}} to show color palettes;
 #' \code{\link{usecol}} to use color palettes.
 #'
@@ -236,15 +236,99 @@ bit_blue <- as.character(bit_pal_blue[[5]])
 # HEX color value of blue.5 of bit_pal_blue OR bit_pal
 names(bit_blue) <- "Blue"
 
+# bit_pal_violet -----
+#' @name bit_pal_violet
+#' @rdname bit_pal_violet
+#' @title dpxR violet color palette
+#'
+#' @description
+#' BLUE:  PANTONE 300 C/U / CMYK 99 50 0 0
+#' RGB 0 114 188 / HEX #0072BC
+#' \code{bit_pal_violet} provides an additional dpxR color palette
+#' as a data frame containing 6 colors (shades of \code{\link{Violet}}).
+#'
+#' See \url{https://media.unhcr.org/archive/Brand-Book-for-external-partners-2CZ7A2P0CGAY.html} for details.
+#'
+#' @examples {
+#' bit_pal_violet
+#' dim(bit_pal_violet)  # 1 6
+#'
+#' # Preferred color:
+#' bit_pal_violet[5]    # preferred (named) color "violet5" (as df)
+#' bit_pal_violet[[5]]  # preferred color value "#0072BC"
+#'
+#' # Access by position:
+#' bit_pal_violet[5]    # named color "violet5" (as df)
+#' bit_pal_violet[[5]]  # color value "#0072BC"
+#'
+#' # Access by name:
+#' bit_pal["violet5"]    # color "violet5" (as df)
+#' bit_pal[["violet5"]]  # color value "#0072BC"
+#'
+#' # Plotting palette:
+#' seecol(bit_pal_violet)
+#' }
+#' @family color palettes
+#'
+#' @seealso
+#' \code{\link{bit_pal}} for the dpxR default color palette with 5 main colors of \code{\link{bit_pal_violet}};
+#' \code{\link{bit_pal_darkviolet}} for an alternative violet dpxR color palette;
+#' \code{\link{bit_pal_primary}} for a dpxR color palette with primary colors;
+#' \code{\link{seecol}} to show color palettes;
+#' \code{\link{usecol}} to use color palettes.
+#'
+#' @export bit_pal_violet
+
+bit_pal_violet <- data.frame(                               #  element:
+  "violet1" = rgb(199, 165, 214, maxColorValue = 255),  #  1. violet1 (non-transparent):  20%
+  "violet2" = rgb(181, 137, 214, maxColorValue = 255),  #  2. violet2 (non-transparent):  40%
+  "violet3" = rgb(153, 105, 199, maxColorValue = 255),  #  3. violet3 (non-transparent):  60%
+  "violet4" = rgb(128,  79, 179, maxColorValue = 255),  #  4. violet4 (non-transparent):  80%
+  "violet5" = rgb(106,  53, 156, maxColorValue = 255),  #  5. violet5 (non-transparent): 100%: preferred color: "Blue"
+  "violet6" = rgb( 85,  37, 134, maxColorValue = 255),  #  5. violet6 (non-transparent): Darker shade
+  stringsAsFactors = FALSE)
+
+# bit_violet -----
+#' @name bit_violet
+#' @rdname bit_violet
+#' @title dpxR color violet
+#'
+#' @description Preferred color violet (as HEX character value): ----
+#' \code{bit_violet} provides the preferred color of \code{\link{bit_pal_violet}}
+#' (as an atomic HEX character value) and is defined as
+#' \code{\link{bit_pal_violet}[[5]]}.
+#'
+#' See \url{https://www.schemecolor.com/violet-gradient.php} for details.
+#'
+#' @examples {
+#' violet  # HEX character "#552586" (as value)
+#' all.equal(bit_violet, bit_pal_violet[[5]])  # TRUE (same HEX values)
+#'
+#' seecol(bit_violet)  # view color and details
+#' }
+#' @family preferred colors
+#'
+#' @seealso
+#' \code{\link{bit_pal_violet}} for the corresponding color palette;
+#' \code{\link{bit_pal}} for the dpxR default color palette with 5 main colors of \code{\link{bit_pal_violet}};
+#' \code{\link{bit_pal_primary}} for a dpxR color palette with primary colors;
+#' \code{\link{seecol}} to show color palettes;
+#' \code{\link{usecol}} to use color palettes.
+#'
+#' @export bit_violet
+
+bit_violet <- as.character(bit_pal_violet[[5]])
+# HEX color value of violet.5 of bit_pal_violet OR bit_pal
+names(bit_violet) <- "Violet"
 
 # bit_pal_grey -----
 #' @name bit_pal_grey
 #' @rdname bit_pal_grey
-#' @title bitR grey color palette
+#' @title dpxR grey color palette
 #'
 #' @description   Using a Rich black for text can make printing
 #'  difficult and the text less sharp. We recommend body copy
-#'  is set in C0 M0 Y0 K100. \code{pal_grey} provides an additional bitR color palette
+#'  is set in C0 M0 Y0 K100. \code{pal_grey} provides an additional dpxR color palette
 #' as a data frame containing 6 colors (shades of \code{\link{black}}).
 #'
 #' See \url{https://media.unhcr.org/archive/Brand-Book-for-external-partners-2CZ7A2P0CGAY.html} for details.
@@ -261,9 +345,9 @@ names(bit_blue) <- "Blue"
 #' @family color palettes
 #'
 #' @seealso
-#' \code{\link{bit_pal}} for the bitR default color palette with 5 main colors of \code{\link{bit_pal_blue}};
-#' \code{\link{bit_pal_darkblue}} for alternative to grey bitR color palettes;
-#' \code{\link{bit_pal_primary}} for a bitR color palette with primary colors;
+#' \code{\link{bit_pal}} for the dpxR default color palette with 5 main colors of \code{\link{bit_pal_blue}};
+#' \code{\link{bit_pal_darkblue}} for alternative to grey dpxR color palettes;
+#' \code{\link{bit_pal_primary}} for a dpxR color palette with primary colors;
 #' \code{\link{seecol}} to show color palettes;
 #' \code{\link{usecol}} to use color palettes.
 #'
@@ -281,7 +365,7 @@ bit_pal_grey <- data.frame(                               #  Element:
 # bit_grey -----
 #' @name bit_grey
 #' @rdname bit_grey
-#' @title bitR color grey
+#' @title dpxR color grey
 #'
 #' @description   \code{bit_grey} provides the preferred color of \code{\link{bit_pal_grey}}
 #' (as an atomic HEX character value) and is defined as
@@ -299,8 +383,8 @@ bit_pal_grey <- data.frame(                               #  Element:
 #'
 #' @seealso
 #' \code{\link{bit_pal_grey}} for the corresponding color palette;
-#' \code{\link{bit_pal}} for the bitR default color palette with 5 main colors of \code{\link{bit_pal_blue}};
-#' \code{\link{bit_pal_primary}} for a bitR color palette with primary colors;
+#' \code{\link{bit_pal}} for the dpxR default color palette with 5 main colors of \code{\link{bit_pal_blue}};
+#' \code{\link{bit_pal_primary}} for a dpxR color palette with primary colors;
 #' \code{\link{seecol}} to show and use color palettes.
 #'
 #' @export bit_grey
@@ -311,7 +395,7 @@ names(bit_grey) <- "Grey"
 # bit_black -----
 #' @name bit_black
 #' @rdname bit_black
-#' @title bitR color black
+#' @title dpxR color black
 #'
 #' @description   \code{bit_black} provides the preferred color of black
 #'
@@ -324,8 +408,8 @@ names(bit_grey) <- "Grey"
 #'
 #' @seealso
 #' \code{\link{bit_pal_grey}} for the corresponding color palette;
-#' \code{\link{bit_pal}} for the bitR default color palette with 5 main colors of \code{\link{bit_pal_blue}};
-#' \code{\link{bit_pal_primary}} for a bitR color palette with primary colors;
+#' \code{\link{bit_pal}} for the dpxR default color palette with 5 main colors of \code{\link{bit_pal_blue}};
+#' \code{\link{bit_pal_primary}} for a dpxR color palette with primary colors;
 #' \code{\link{seecol}} to show and use color palettes.
 #'
 #' @export bit_black
@@ -335,7 +419,7 @@ names(bit_black) <- "Black"
 # bit_white -----
 #' @name bit_white
 #' @rdname bit_white
-#' @title bitR color white
+#' @title dpxR color white
 #'
 #' @description   \code{bit_white} provides the preferred color of white
 #' (as an atomic HEX character value)
@@ -349,8 +433,8 @@ names(bit_black) <- "Black"
 #'
 #' @seealso
 #' \code{\link{bit_pal_grey}} for the corresponding color palette;
-#' \code{\link{bit_pal}} for the bitR default color palette with 5 main colors of \code{\link{bit_pal_blue}};
-#' \code{\link{bit_pal_primary}} for a bitR color palette with primary colors;
+#' \code{\link{bit_pal}} for the dpxR default color palette with 5 main colors of \code{\link{bit_pal_blue}};
+#' \code{\link{bit_pal_primary}} for a dpxR color palette with primary colors;
 #' \code{\link{seecol}} to show and use color palettes.
 #'
 #' @export bit_white
@@ -362,7 +446,7 @@ names(bit_white) <- "White"
 # bit_pal_yellow -----
 #' @name bit_pal_yellow
 #' @rdname bit_pal_yellow
-#' @title bitR yellow color palette.
+#' @title dpxR yellow color palette.
 #'
 #' @description  The secondary accent colour may be used in some circumstances
 #' for a graphic element.
@@ -370,7 +454,7 @@ names(bit_white) <- "White"
 #'   CMYK 3 1 100 0
 #'   RGB 250 235 0
 #'   HEX #FAEB00
-#'   \code{bit_pal_yellow} provides an additional bitR color palette
+#'   \code{bit_pal_yellow} provides an additional dpxR color palette
 #' as a data frame containing 6 colors (shades of
 #' \code{\link{bit_yellow}}).
 #'
@@ -388,8 +472,8 @@ names(bit_white) <- "White"
 #' @family color palettes
 #'
 #' @seealso
-#' \code{\link{bit_pal}} for the bitR default color palette with all 5 colors of \code{\link{bit_yellow}};
-#' \code{\link{bit_pal_primary}} for a bitR color palette with primary colors;
+#' \code{\link{bit_pal}} for the dpxR default color palette with all 5 colors of \code{\link{bit_yellow}};
+#' \code{\link{bit_pal_primary}} for a dpxR color palette with primary colors;
 #' \code{\link{seecol}} to show color palettes;
 #' \code{\link{usecol}} to use color palettes.
 #'
@@ -410,7 +494,7 @@ bit_pal_yellow <- data.frame(                               #  element:
 #' @rdname bit_yellow
 #' @title Preferred color yellow (as HEX character value)
 #'
-#' @description bitR color yellow.
+#' @description dpxR color yellow.
 #'
 #' \code{yellow} provides the preferred color of \code{\link{bit_pal_yellow}}
 #' (as an atomic HEX character value) and is defined as
@@ -429,7 +513,7 @@ bit_pal_yellow <- data.frame(                               #  element:
 #' @seealso
 #' \code{\link{bit_pal_yellow}} for the corresponding color palette;
 #' \code{\link{bit_pal}} for the bit default color palette with all 5 colors of \code{\link{bit_pal_yellow}};
-#' \code{\link{bit_pal_primary}} for a bitR color palette with primary colors;
+#' \code{\link{bit_pal_primary}} for a dpxR color palette with primary colors;
 #' \code{\link{seecol}} to show color palettes;
 #' \code{\link{usecol}} to use color palettes.
 #'
@@ -444,13 +528,13 @@ names(bit_yellow) <- "Yellow"
 # bit_pal_darkblue -----
 #' @name bit_pal_darkblue
 #' @rdname bit_pal_darkblue
-#' @title bitR darkblue color palette.
+#' @title dpxR darkblue color palette.
 #'
 #' @description  darkblue
 #'  CMYK 99 83 36 27
 #'  RGB 24 55 95
 #'  HEX #18375F
-#' \code{bit_pal_darkblue} provides an additional bitR color palette
+#' \code{bit_pal_darkblue} provides an additional dpxR color palette
 #' as a data frame containing 6 colors (shades of
 #' \code{\link{bit_darkblue}}).
 #'
@@ -468,9 +552,9 @@ names(bit_yellow) <- "Yellow"
 #' @family color palettes
 #'
 #' @seealso
-#' \code{\link{bit_pal}} for the bitR default color palette with all 5 colors of \code{\link{bit_pal_blue}};
-#' \code{\link{bit_pal_blue}} for an alternative blue bitR color palette;
-#' \code{\link{bit_pal_primary}} for a bitR color palette with primary colors;
+#' \code{\link{bit_pal}} for the dpxR default color palette with all 5 colors of \code{\link{bit_pal_blue}};
+#' \code{\link{bit_pal_blue}} for an alternative blue dpxR color palette;
+#' \code{\link{bit_pal_primary}} for a dpxR color palette with primary colors;
 #' \code{\link{seecol}} to show color palettes;
 #' \code{\link{usecol}} to use color palettes.
 #'
@@ -491,7 +575,7 @@ bit_pal_darkblue <- data.frame(                               #  element:
 #' @rdname bit_darkblue
 #' @title Preferred color darkblue (as HEX character value)
 #'
-#' @description bitR color darkblue.
+#' @description dpxR color darkblue.
 #'
 #' \code{darkblue} provides the preferred color of \code{\link{bit_pal_darkblue}}
 #' (as an atomic HEX character value) and is defined as
@@ -508,8 +592,8 @@ bit_pal_darkblue <- data.frame(                               #  element:
 #'
 #' @seealso
 #' \code{\link{bit_pal_darkblue}} for the corresponding color palette;
-#' \code{\link{bit_pal}} for the bitR default color palette with all 5 colors of \code{\link{bit_pal_blue}};
-#' \code{\link{bit_pal_primary}} for a bitR color palette with primary colors;
+#' \code{\link{bit_pal}} for the dpxR default color palette with all 5 colors of \code{\link{bit_pal_blue}};
+#' \code{\link{bit_pal_primary}} for a dpxR color palette with primary colors;
 #' \code{\link{seecol}} to show color palettes;
 #' \code{\link{usecol}} to use color palettes.
 #'
@@ -523,11 +607,11 @@ names(bit_darkblue) <- "Darkblue"
 # bit_pal_green -----
 #' @name bit_pal_green
 #' @rdname bit_pal_green
-#' @title bitR greem color palette.
+#' @title dpxR greem color palette.
 #'
-#' @description   bitR green color palette.
+#' @description   dpxR green color palette.
 #' GREEN:  CMYK 90 0 52 0 / RGB 0 179 152 / HEX #00B398
-#' \code{pal_green} provides an additional bitR color palette
+#' \code{pal_green} provides an additional dpxR color palette
 #' as a data frame containing 6 colors (shades of
 #' \code{\link{green}}).
 #'
@@ -545,8 +629,8 @@ names(bit_darkblue) <- "Darkblue"
 #' @family color palettes
 #'
 #' @seealso
-#' \code{\link{bit_pal}} for the bitR default color palette with all 5 colors of \code{\link{bit_pal_blue}};
-#' \code{\link{bit_pal_primary}} for a bitR color palette with primary colors;
+#' \code{\link{bit_pal}} for the dpxR default color palette with all 5 colors of \code{\link{bit_pal_blue}};
+#' \code{\link{bit_pal_primary}} for a dpxR color palette with primary colors;
 #' \code{\link{seecol}} to show color palettes;
 #' \code{\link{usecol}} to use color palettes.
 #'
@@ -568,7 +652,7 @@ bit_pal_green <- data.frame(                               #  element:
 #' @rdname bit_green
 #' @title Preferred color darkblue (as HEX character value)
 #'
-#' @description bitR color green.
+#' @description dpxR color green.
 #'
 #' \code{green} provides the preferred color of \code{\link{bit_pal_green}}
 #' (as an atomic HEX character value) and is defined as
@@ -586,8 +670,8 @@ bit_pal_green <- data.frame(                               #  element:
 #'
 #' @seealso
 #' \code{\link{bit_pal_green}} for the corresponding color palette;
-#' \code{\link{bit_pal}} for the bitR default color palette with all 5 colors of \code{\link{bit_pal_blue}};
-#' \code{\link{bit_pal_primary}} for a bitR color palette with primary colors;
+#' \code{\link{bit_pal}} for the dpxR default color palette with all 5 colors of \code{\link{bit_pal_blue}};
+#' \code{\link{bit_pal_primary}} for a dpxR color palette with primary colors;
 #' \code{\link{seecol}} to show color palettes;
 #' \code{\link{usecol}} to use color palettes.
 #'
@@ -600,12 +684,12 @@ names(bit_green) <- "Green"
 # bit_pal_red -----
 #' @name bit_pal_red
 #' @rdname bit_pal_red
-#' @title bitR red color palette.
+#' @title dpxR red color palette.
 #'
-#' @description   bitR red color palette.
+#' @description   dpxR red color palette.
 #'  RED: CMYK 0 87 52 0 / RGB 239 74 96 / HEX #EF4A60
 #'
-#' \code{pal_red} provides an additional bitR color palette
+#' \code{pal_red} provides an additional dpxR color palette
 #' as a data frame containing 6 colors (shades of
 #' \code{\link{bit_red}}).
 #'
@@ -623,8 +707,8 @@ names(bit_green) <- "Green"
 #' @family color palettes
 #'
 #' @seealso
-#' \code{\link{bit_pal}} for the bitR default color palette with all 5 colors of \code{\link{bit_pal_blue}};
-#' \code{\link{bit_pal_primary}} for a bitR color palette with primary colors;
+#' \code{\link{bit_pal}} for the dpxR default color palette with all 5 colors of \code{\link{bit_pal_blue}};
+#' \code{\link{bit_pal_primary}} for a dpxR color palette with primary colors;
 #' \code{\link{seecol}} to show color palettes;
 #' \code{\link{usecol}} to use color palettes.
 #'
@@ -645,7 +729,7 @@ bit_pal_red <- data.frame(                               #  element:
 #' @rdname bit_red
 #' @title Preferred color red (as HEX character value)
 #'
-#' @description bitR color red.
+#' @description dpxR color red.
 #'
 #' \code{red} provides the preferred color of \code{\link{bit_pal_red}}
 #' (as an atomic HEX character value) and is defined as
@@ -662,8 +746,8 @@ bit_pal_red <- data.frame(                               #  element:
 #'
 #' @seealso
 #' \code{\link{bit_pal_red}} for the corresponding color palette;
-#' \code{\link{bit_pal}} for the bitR default color palette with all 5 colors of \code{\link{bit_pal_blue}};
-#' \code{\link{bit_pal_primary}} for a bitR color palette with primary colors;
+#' \code{\link{bit_pal}} for the dpxR default color palette with all 5 colors of \code{\link{bit_pal_blue}};
+#' \code{\link{bit_pal_primary}} for a dpxR color palette with primary colors;
 #' \code{\link{seecol}} to show color palettes;
 #' \code{\link{usecol}} to use color palettes.
 #'
@@ -676,10 +760,10 @@ names(bit_red) <- "Red"
 # bit_pal_primary -----
 #' @name bit_pal_primary
 #' @rdname bit_pal_primary
-#' @title Scale of all 4 preferred colors, Other combinations of bitR color palettes
+#' @title Scale of all 4 preferred colors, Other combinations of dpxR color palettes
 #'
-#' @description  \code{bit_pal_primary} provides an additional bitR color palette
-#' that collects the primary bitR color as a data frame containing 4 colors.
+#' @description  \code{bit_pal_primary} provides an additional dpxR color palette
+#' that collects the primary dpxR color as a data frame containing 4 colors.
 #'
 #' See \url{https://media.unhcr.org/archive/Brand-Book-for-external-partners-2CZ7A2P0CGAY.html} for details.
 #'
@@ -701,7 +785,7 @@ names(bit_red) <- "Red"
 #' @family color palettes
 #'
 #' @seealso
-#' \code{\link{bit_pal}} for the default bitR color palette;
+#' \code{\link{bit_pal}} for the default dpxR color palette;
 #' \code{\link{seecol}} to show color palettes;
 #' \code{\link{usecol}} to use color palettes.
 #'
@@ -723,9 +807,9 @@ bit_pal_primary <- data.frame( # Element:
 #' @rdname bit_pal_graphic
 #' @title Scale of all XX preferred colors for graphic creation
 #'
-#' @description  bitR preferred graphic colors to be use as a main set for graphics creation.
-#' \code{bit_pal_graphic} provides an additional bitR color palette
-#' that collects the preferred bitR colors for graphics as a data frame containing 6 colors.
+#' @description  dpxR preferred graphic colors to be use as a main set for graphics creation.
+#' \code{bit_pal_graphic} provides an additional dpxR color palette
+#' that collects the preferred dpxR colors for graphics as a data frame containing 6 colors.
 #'
 #' See \url{https://media.unhcr.org/archive/Data-visualisation-colour-palette-2CZ7A2HOVFP9.html} for details.
 #'
@@ -748,7 +832,7 @@ bit_pal_primary <- data.frame( # Element:
 #' @family color palettes
 #'
 #' @seealso
-#' \code{\link{bit_pal}} for the default bitR color palette;
+#' \code{\link{bit_pal}} for the default dpxR color palette;
 #' \code{\link{seecol}} to show color palettes;
 #' \code{\link{usecol}} to use color palettes.
 #'
@@ -760,7 +844,8 @@ bit_pal_graphic <- data.frame( # Element:
   "Green"    = bit_pal_green[[5]],    #  3. green
   "Grey3"    = bit_pal_grey[[3]],     #  4. grey3
   "Red"      = bit_pal_red[[5]],      #  5. red
-  "Blue3"    = bit_pal_blue[[3]], #  6. blue3
+  "Blue3"    = bit_pal_blue[[3]],     #  6. blue3
+  "Violet"   = bit_pal_violet[[5]],   #  7. violet5
   stringsAsFactors = FALSE)
 
 
