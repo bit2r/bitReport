@@ -33,7 +33,7 @@ Suggests:
     xfun
 Author: Choonghyun Ryu [aut, cre]
 Maintainer: Choonghyun Ryu <choonghyun.ryu@gmail.com>       
-License: GPL-2 | file LICENSE
+License: GPL-2
 SystemRequirements: Pandoc (>= 2.2.3)
 Encoding: UTF-8
 LazyData: true
