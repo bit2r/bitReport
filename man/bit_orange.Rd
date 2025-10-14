@@ -3,7 +3,7 @@
 \docType{data}
 \name{bit_orange}
 \alias{bit_orange}
-\title{bitR color orange}
+\title{dpxR color orange}
 \format{
 An object of class \code{character} of length 1.
 }
@@ -24,9 +24,9 @@ seecol(bit_orange)  # 색상을 조회
 }
 }
 \seealso{
-\code{\link{bit_pal_orange}} bitR 색상 팔레트 대체 색상의 경우;
-\code{\link{bit_pal}} 5가지 주요 색상이 있는 bitR 기본 색상 팔레트. \code{\link{bit_pal_orange}};
-\code{\link{bit_pal_primary}} 기본 색상이 있는 bitR 색상 팔레트의 경우;
+\code{\link{bit_pal_orange}} dpxR 색상 팔레트 대체 색상의 경우;
+\code{\link{bit_pal}} 5가지 주요 색상이 있는 dpxR 기본 색상 팔레트. \code{\link{bit_pal_orange}};
+\code{\link{bit_pal_primary}} 기본 색상이 있는 dpxR 색상 팔레트의 경우;
 \code{\link{seecol}} 팔래트 색상 보기;
 \code{\link{usecol}} 팔레트 색상 사용하기.
 }

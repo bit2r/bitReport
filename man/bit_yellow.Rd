@@ -11,7 +11,7 @@ An object of class \code{character} of length 1.
 bit_yellow
 }
 \description{
-bitR color yellow.
+dpxR color yellow.
 
 \code{yellow} provides the preferred color of \code{\link{bit_pal_yellow}}
 (as an atomic HEX character value) and is defined as
@@ -30,7 +30,7 @@ seecol(bit_yellow)  # view color and details
 \seealso{
 \code{\link{bit_pal_yellow}} for the corresponding color palette;
 \code{\link{bit_pal}} for the bit default color palette with all 5 colors of \code{\link{bit_pal_yellow}};
-\code{\link{bit_pal_primary}} for a bitR color palette with primary colors;
+\code{\link{bit_pal_primary}} for a dpxR color palette with primary colors;
 \code{\link{seecol}} to show color palettes;
 \code{\link{usecol}} to use color palettes.
 
@@ -41,6 +41,7 @@ Other preferred colors:
 \code{\link{bit_green}},
 \code{\link{bit_grey}},
 \code{\link{bit_red}},
+\code{\link{bit_violet}},
 \code{\link{bit_white}}
 }
 \concept{preferred colors}

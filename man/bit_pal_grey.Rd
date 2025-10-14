@@ -3,7 +3,7 @@
 \docType{data}
 \name{bit_pal_grey}
 \alias{bit_pal_grey}
-\title{bitR grey color palette}
+\title{dpxR grey color palette}
 \format{
 An object of class \code{data.frame} with 1 rows and 6 columns.
 }
@@ -13,7 +13,7 @@ bit_pal_grey
 \description{
 Using a Rich black for text can make printing
  difficult and the text less sharp. We recommend body copy
- is set in C0 M0 Y0 K100. \code{pal_grey} provides an additional bitR color palette
+ is set in C0 M0 Y0 K100. \code{pal_grey} provides an additional dpxR color palette
 as a data frame containing 6 colors (shades of \code{\link{black}}).
 
 See \url{https://media.unhcr.org/archive/Brand-Book-for-external-partners-2CZ7A2P0CGAY.html} for details.
@@ -30,9 +30,9 @@ seecol(bit_pal_grey)
 }
 }
 \seealso{
-\code{\link{bit_pal}} for the bitR default color palette with 5 main colors of \code{\link{bit_pal_blue}};
-\code{\link{bit_pal_darkblue}} for alternative to grey bitR color palettes;
-\code{\link{bit_pal_primary}} for a bitR color palette with primary colors;
+\code{\link{bit_pal}} for the dpxR default color palette with 5 main colors of \code{\link{bit_pal_blue}};
+\code{\link{bit_pal_darkblue}} for alternative to grey dpxR color palettes;
+\code{\link{bit_pal_primary}} for a dpxR color palette with primary colors;
 \code{\link{seecol}} to show color palettes;
 \code{\link{usecol}} to use color palettes.
 
@@ -44,6 +44,7 @@ Other color palettes:
 \code{\link{bit_pal_orange}},
 \code{\link{bit_pal_primary}},
 \code{\link{bit_pal_red}},
+\code{\link{bit_pal_violet}},
 \code{\link{bit_pal_yellow}},
 \code{\link{bit_pal}}
 }

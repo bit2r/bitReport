@@ -3,7 +3,7 @@
 \docType{data}
 \name{bit_pal_red}
 \alias{bit_pal_red}
-\title{bitR red color palette.}
+\title{dpxR red color palette.}
 \format{
 An object of class \code{data.frame} with 1 rows and 6 columns.
 }
@@ -11,10 +11,10 @@ An object of class \code{data.frame} with 1 rows and 6 columns.
 bit_pal_red
 }
 \description{
-bitR red color palette.
+dpxR red color palette.
  RED: CMYK 0 87 52 0 / RGB 239 74 96 / HEX #EF4A60
 
-\code{pal_red} provides an additional bitR color palette
+\code{pal_red} provides an additional dpxR color palette
 as a data frame containing 6 colors (shades of
 \code{\link{bit_red}}).
 
@@ -32,8 +32,8 @@ seecol(bit_pal_red)
 }
 }
 \seealso{
-\code{\link{bit_pal}} for the bitR default color palette with all 5 colors of \code{\link{bit_pal_blue}};
-\code{\link{bit_pal_primary}} for a bitR color palette with primary colors;
+\code{\link{bit_pal}} for the dpxR default color palette with all 5 colors of \code{\link{bit_pal_blue}};
+\code{\link{bit_pal_primary}} for a dpxR color palette with primary colors;
 \code{\link{seecol}} to show color palettes;
 \code{\link{usecol}} to use color palettes.
 
@@ -45,6 +45,7 @@ Other color palettes:
 \code{\link{bit_pal_grey}},
 \code{\link{bit_pal_orange}},
 \code{\link{bit_pal_primary}},
+\code{\link{bit_pal_violet}},
 \code{\link{bit_pal_yellow}},
 \code{\link{bit_pal}}
 }

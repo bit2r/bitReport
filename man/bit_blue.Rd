@@ -3,7 +3,7 @@
 \docType{data}
 \name{bit_blue}
 \alias{bit_blue}
-\title{bitR color blue}
+\title{dpxR color blue}
 \format{
 An object of class \code{character} of length 1.
 }
@@ -28,8 +28,8 @@ seecol(bit_blue)  # view color and details
 }
 \seealso{
 \code{\link{bit_pal_blue}} for the corresponding color palette;
-\code{\link{bit_pal}} for the bitR default color palette with 5 main colors of \code{\link{bit_pal_blue}};
-\code{\link{bit_pal_primary}} for a bitR color palette with primary colors;
+\code{\link{bit_pal}} for the dpxR default color palette with 5 main colors of \code{\link{bit_pal_blue}};
+\code{\link{bit_pal_primary}} for a dpxR color palette with primary colors;
 \code{\link{seecol}} to show color palettes;
 \code{\link{usecol}} to use color palettes.
 
@@ -39,6 +39,7 @@ Other preferred colors:
 \code{\link{bit_green}},
 \code{\link{bit_grey}},
 \code{\link{bit_red}},
+\code{\link{bit_violet}},
 \code{\link{bit_white}},
 \code{\link{bit_yellow}}
 }

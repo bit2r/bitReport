@@ -11,8 +11,8 @@ An object of class \code{data.frame} with 1 rows and 11 columns.
 bit_pal
 }
 \description{
-bitR primary color palette. \code{bit_pal}
-provides the default bitR color palette
+dpxR primary color palette. \code{bit_pal}
+provides the default dpxR color palette
 as a data frame containing 11 colors.
 
 This is the primary (web/sRGB) scale.
@@ -38,8 +38,8 @@ seecol(bit_pal)
 
 }
 \seealso{
-\code{\link{bit_pal_blue}} for the bitR default blue palette;
-\code{\link{bit_pal_primary}} for a bitR color palette with primary colors;
+\code{\link{bit_pal_blue}} for the dpxR default blue palette;
+\code{\link{bit_pal_primary}} for a dpxR color palette with primary colors;
 \code{\link{seecol}} to show color palettes;
 \code{\link{usecol}} to use color palettes.
 
@@ -52,6 +52,7 @@ Other color palettes:
 \code{\link{bit_pal_orange}},
 \code{\link{bit_pal_primary}},
 \code{\link{bit_pal_red}},
+\code{\link{bit_pal_violet}},
 \code{\link{bit_pal_yellow}}
 }
 \concept{color palettes}

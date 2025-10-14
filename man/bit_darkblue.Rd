@@ -11,7 +11,7 @@ An object of class \code{character} of length 1.
 bit_darkblue
 }
 \description{
-bitR color darkblue.
+dpxR color darkblue.
 
 \code{darkblue} provides the preferred color of \code{\link{bit_pal_darkblue}}
 (as an atomic HEX character value) and is defined as
@@ -28,8 +28,8 @@ seecol(bit_darkblue)  # view color and details
 }
 \seealso{
 \code{\link{bit_pal_darkblue}} for the corresponding color palette;
-\code{\link{bit_pal}} for the bitR default color palette with all 5 colors of \code{\link{bit_pal_blue}};
-\code{\link{bit_pal_primary}} for a bitR color palette with primary colors;
+\code{\link{bit_pal}} for the dpxR default color palette with all 5 colors of \code{\link{bit_pal_blue}};
+\code{\link{bit_pal_primary}} for a dpxR color palette with primary colors;
 \code{\link{seecol}} to show color palettes;
 \code{\link{usecol}} to use color palettes.
 
@@ -39,6 +39,7 @@ Other preferred colors:
 \code{\link{bit_green}},
 \code{\link{bit_grey}},
 \code{\link{bit_red}},
+\code{\link{bit_violet}},
 \code{\link{bit_white}},
 \code{\link{bit_yellow}}
 }

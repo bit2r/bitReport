@@ -3,7 +3,7 @@
 \docType{data}
 \name{bit_pal_green}
 \alias{bit_pal_green}
-\title{bitR greem color palette.}
+\title{dpxR greem color palette.}
 \format{
 An object of class \code{data.frame} with 1 rows and 6 columns.
 }
@@ -11,9 +11,9 @@ An object of class \code{data.frame} with 1 rows and 6 columns.
 bit_pal_green
 }
 \description{
-bitR green color palette.
+dpxR green color palette.
 GREEN:  CMYK 90 0 52 0 / RGB 0 179 152 / HEX #00B398
-\code{pal_green} provides an additional bitR color palette
+\code{pal_green} provides an additional dpxR color palette
 as a data frame containing 6 colors (shades of
 \code{\link{green}}).
 
@@ -31,8 +31,8 @@ seecol(bit_pal_green)
 }
 }
 \seealso{
-\code{\link{bit_pal}} for the bitR default color palette with all 5 colors of \code{\link{bit_pal_blue}};
-\code{\link{bit_pal_primary}} for a bitR color palette with primary colors;
+\code{\link{bit_pal}} for the dpxR default color palette with all 5 colors of \code{\link{bit_pal_blue}};
+\code{\link{bit_pal_primary}} for a dpxR color palette with primary colors;
 \code{\link{seecol}} to show color palettes;
 \code{\link{usecol}} to use color palettes.
 
@@ -44,6 +44,7 @@ Other color palettes:
 \code{\link{bit_pal_orange}},
 \code{\link{bit_pal_primary}},
 \code{\link{bit_pal_red}},
+\code{\link{bit_pal_violet}},
 \code{\link{bit_pal_yellow}},
 \code{\link{bit_pal}}
 }

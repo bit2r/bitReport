@@ -52,7 +52,7 @@
     vertical-align: top;
   }  
   @bottom-right {
-    content: "dlookr / " string(date-text);
+    content: "bitReport / " string(date-text);
     margin-right: -10mm;
     margin-top: 10mm;
     padding-top: 1.5mm;

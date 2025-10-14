@@ -5,15 +5,15 @@
 \alias{bit_pal_graphic}
 \title{Scale of all XX preferred colors for graphic creation}
 \format{
-An object of class \code{data.frame} with 1 rows and 6 columns.
+An object of class \code{data.frame} with 1 rows and 7 columns.
 }
 \usage{
 bit_pal_graphic
 }
 \description{
-bitR preferred graphic colors to be use as a main set for graphics creation.
-\code{bit_pal_graphic} provides an additional bitR color palette
-that collects the preferred bitR colors for graphics as a data frame containing 6 colors.
+dpxR preferred graphic colors to be use as a main set for graphics creation.
+\code{bit_pal_graphic} provides an additional dpxR color palette
+that collects the preferred dpxR colors for graphics as a data frame containing 6 colors.
 
 See \url{https://media.unhcr.org/archive/Data-visualisation-colour-palette-2CZ7A2HOVFP9.html} for details.
 }
@@ -36,7 +36,7 @@ seecol(bit_pal_graphic)
 
 }
 \seealso{
-\code{\link{bit_pal}} for the default bitR color palette;
+\code{\link{bit_pal}} for the default dpxR color palette;
 \code{\link{seecol}} to show color palettes;
 \code{\link{usecol}} to use color palettes.
 
@@ -48,6 +48,7 @@ Other color palettes:
 \code{\link{bit_pal_orange}},
 \code{\link{bit_pal_primary}},
 \code{\link{bit_pal_red}},
+\code{\link{bit_pal_violet}},
 \code{\link{bit_pal_yellow}},
 \code{\link{bit_pal}}
 }

@@ -3,7 +3,7 @@
 \docType{data}
 \name{bit_pal_primary}
 \alias{bit_pal_primary}
-\title{Scale of all 4 preferred colors, Other combinations of bitR color palettes}
+\title{Scale of all 4 preferred colors, Other combinations of dpxR color palettes}
 \format{
 An object of class \code{data.frame} with 1 rows and 4 columns.
 }
@@ -11,8 +11,8 @@ An object of class \code{data.frame} with 1 rows and 4 columns.
 bit_pal_primary
 }
 \description{
-\code{bit_pal_primary} provides an additional bitR color palette
-that collects the primary bitR color as a data frame containing 4 colors.
+\code{bit_pal_primary} provides an additional dpxR color palette
+that collects the primary dpxR color as a data frame containing 4 colors.
 
 See \url{https://media.unhcr.org/archive/Brand-Book-for-external-partners-2CZ7A2P0CGAY.html} for details.
 }
@@ -34,7 +34,7 @@ seecol(bit_pal_primary)
 }
 }
 \seealso{
-\code{\link{bit_pal}} for the default bitR color palette;
+\code{\link{bit_pal}} for the default dpxR color palette;
 \code{\link{seecol}} to show color palettes;
 \code{\link{usecol}} to use color palettes.
 
@@ -46,6 +46,7 @@ Other color palettes:
 \code{\link{bit_pal_grey}},
 \code{\link{bit_pal_orange}},
 \code{\link{bit_pal_red}},
+\code{\link{bit_pal_violet}},
 \code{\link{bit_pal_yellow}},
 \code{\link{bit_pal}}
 }

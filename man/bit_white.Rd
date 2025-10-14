@@ -3,7 +3,7 @@
 \docType{data}
 \name{bit_white}
 \alias{bit_white}
-\title{bitR color white}
+\title{dpxR color white}
 \format{
 An object of class \code{character} of length 1.
 }
@@ -23,8 +23,8 @@ bit_white  # "#FFFFFF"
 }
 \seealso{
 \code{\link{bit_pal_grey}} for the corresponding color palette;
-\code{\link{bit_pal}} for the bitR default color palette with 5 main colors of \code{\link{bit_pal_blue}};
-\code{\link{bit_pal_primary}} for a bitR color palette with primary colors;
+\code{\link{bit_pal}} for the dpxR default color palette with 5 main colors of \code{\link{bit_pal_blue}};
+\code{\link{bit_pal_primary}} for a dpxR color palette with primary colors;
 \code{\link{seecol}} to show and use color palettes.
 
 Other preferred colors: 
@@ -34,6 +34,7 @@ Other preferred colors:
 \code{\link{bit_green}},
 \code{\link{bit_grey}},
 \code{\link{bit_red}},
+\code{\link{bit_violet}},
 \code{\link{bit_yellow}}
 }
 \concept{preferred colors}

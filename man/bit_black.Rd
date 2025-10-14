@@ -3,7 +3,7 @@
 \docType{data}
 \name{bit_black}
 \alias{bit_black}
-\title{bitR color black}
+\title{dpxR color black}
 \format{
 An object of class \code{character} of length 1.
 }
@@ -22,8 +22,8 @@ bit_black  # "#000000"
 }
 \seealso{
 \code{\link{bit_pal_grey}} for the corresponding color palette;
-\code{\link{bit_pal}} for the bitR default color palette with 5 main colors of \code{\link{bit_pal_blue}};
-\code{\link{bit_pal_primary}} for a bitR color palette with primary colors;
+\code{\link{bit_pal}} for the dpxR default color palette with 5 main colors of \code{\link{bit_pal_blue}};
+\code{\link{bit_pal_primary}} for a dpxR color palette with primary colors;
 \code{\link{seecol}} to show and use color palettes.
 
 Other preferred colors: 
@@ -32,6 +32,7 @@ Other preferred colors:
 \code{\link{bit_green}},
 \code{\link{bit_grey}},
 \code{\link{bit_red}},
+\code{\link{bit_violet}},
 \code{\link{bit_white}},
 \code{\link{bit_yellow}}
 }

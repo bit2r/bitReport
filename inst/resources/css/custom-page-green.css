@@ -1,0 +1,218 @@
+/*****
+ Main page size
+ *****/
+@page {
+  size: A4 portrait; /* var(--pagedjs-width) doesn't work in browser when printing */
+  margin: 40mm 25mm 25mm 25mm;
+}
+@page :blank {
+
+}
+
+/*****
+ Store some string variables
+ *****/
+.date {
+  string-set: date-text content(text);
+}
+
+.title {
+  string-set: title-text content(text);
+}
+
+.subtitle {
+  string-set: subtitle-text content(text);
+}
+
+.shorttitle1 {
+  string-set: h1-text content(text);
+}
+
+.shorttitle2 {
+  string-set: h2-text content(text);
+}
+
+@page chapter:left {
+  @top-left {
+    content: string(title-text);
+    margin-left: -10mm;
+    margin-top: 10mm;
+    color: var(--custom-grey60);
+    font-size: 0.8em;
+    text-transform: uppercase;
+    vertical-align: top;
+  }
+  @top-right {
+    content: none;
+    margin-right: -10mm;
+    margin-top: 10mm;
+    color: var(--custom-grey60);
+    font-size: 0.8em;
+    text-transform: uppercase;
+    vertical-align: top;
+  }  
+  @bottom-right {
+    content: "bitReport / " string(date-text);
+    margin-right: -10mm;
+    margin-top: 10mm;
+    padding-top: 1.5mm;
+    color: var(--custom-green);
+    font-size: 0.7em;
+    vertical-align: top;
+    border-top: 0.5px solid var(--custom-green);
+  }
+  @bottom-left {
+    content: counter(page);
+    margin-left: -10mm;
+    margin-top: 10mm;
+    padding-top: 1.5mm;
+    color: var(--custom-green);
+    font-size: 0.7em;
+    vertical-align: top;
+    border-top: 0.5px solid var(--custom-green);
+  }
+      /*background-image: url(../image/header-ruler-left-green.svg);
+   ## We put the SVG directly in the CSS - with Base 64 - so that it works in all browser..*/
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgZGF0YS1uYW1lPSJMYXllciAzIgogICB2ZXJzaW9uPSIxLjEiCiAgIHZpZXdCb3g9IjAgMCA1MTAuMjQgOS4zOSIKICAgaWQ9InN2ZzIiCiAgIHNvZGlwb2RpOmRvY25hbWU9ImhlYWRlci1ydWxlci1sZWZ0LWdyZWVuLnN2ZyIKICAgaW5rc2NhcGU6dmVyc2lvbj0iMS4zICgwZTE1MGVkLCAyMDIzLTA3LTIxKSIKICAgeG1sbnM6aW5rc2NhcGU9Imh0dHA6Ly93d3cuaW5rc2NhcGUub3JnL25hbWVzcGFjZXMvaW5rc2NhcGUiCiAgIHhtbG5zOnNvZGlwb2RpPSJodHRwOi8vc29kaXBvZGkuc291cmNlZm9yZ2UubmV0L0RURC9zb2RpcG9kaS0wLmR0ZCIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyI+CiAgPHNvZGlwb2RpOm5hbWVkdmlldwogICAgIGlkPSJuYW1lZHZpZXcyIgogICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIKICAgICBib3JkZXJjb2xvcj0iIzAwMDAwMCIKICAgICBib3JkZXJvcGFjaXR5PSIwLjI1IgogICAgIGlua3NjYXBlOnNob3dwYWdlc2hhZG93PSIyIgogICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwLjAiCiAgICAgaW5rc2NhcGU6cGFnZWNoZWNrZXJib2FyZD0iMCIKICAgICBpbmtzY2FwZTpkZXNrY29sb3I9IiNkMWQxZDEiCiAgICAgaW5rc2NhcGU6em9vbT0iMi43Mzk4ODcyIgogICAgIGlua3NjYXBlOmN4PSIyNTUuMTE5OTkiCiAgICAgaW5rc2NhcGU6Y3k9IjQuNTYyMjMxNiIKICAgICBpbmtzY2FwZTp3aW5kb3ctd2lkdGg9IjE4NDAiCiAgICAgaW5rc2NhcGU6d2luZG93LWhlaWdodD0iMTA4MCIKICAgICBpbmtzY2FwZTp3aW5kb3cteD0iMTkyMCIKICAgICBpbmtzY2FwZTp3aW5kb3cteT0iOTciCiAgICAgaW5rc2NhcGU6d2luZG93LW1heGltaXplZD0iMCIKICAgICBpbmtzY2FwZTpjdXJyZW50LWxheWVyPSJzdmcyIiAvPgogIDxtZXRhZGF0YQogICAgIGlkPSJtZXRhZGF0YTEiPgogICAgPHJkZjpSREY+CiAgICAgIDxjYzpXb3JrCiAgICAgICAgIHJkZjphYm91dD0iIj4KICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD4KICAgICAgICA8ZGM6dHlwZQogICAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL3B1cmwub3JnL2RjL2RjbWl0eXBlL1N0aWxsSW1hZ2UiIC8+CiAgICAgIDwvY2M6V29yaz4KICAgIDwvcmRmOlJERj4KICA8L21ldGFkYXRhPgogIDxkZWZzCiAgICAgaWQ9ImRlZnMxIj4KICAgIDxzdHlsZQogICAgICAgaWQ9InN0eWxlMSI+LmNscy0xe2ZpbGw6bm9uZTtzdHJva2U6IzA4NzJiOTtzdHJva2Utd2lkdGg6MC41cHg7fTwvc3R5bGU+CiAgPC9kZWZzPgogIDxwYXRoCiAgICAgZD0ibTAgMGg1MTAuMjMiCiAgICAgZmlsbD0ibm9uZSIKICAgICBzdHJva2U9IiMwMDcyYmMiCiAgICAgc3Ryb2tlLXdpZHRoPSIuOTQ0ODciCiAgICAgaWQ9InBhdGgxIgogICAgIHN0eWxlPSJzdHJva2U6IzJlYjYyYztzdHJva2Utb3BhY2l0eToxIiAvPgogIDxwYXRoCiAgICAgZD0ibTAgMS40NDUxaDIwMCIKICAgICBmaWxsPSIjNjgzYzNjIgogICAgIHN0cm9rZT0iIzAwNzJiYyIKICAgICBzdHJva2Utd2lkdGg9IjIuNjA2MyIKICAgICBpZD0icGF0aDIiCiAgICAgc3R5bGU9ImZpbGw6IzJlYjYyYztmaWxsLW9wYWNpdHk6MTtzdHJva2U6IzJlYjYyYztzdHJva2Utb3BhY2l0eToxIiAvPgo8L3N2Zz4K");
+  
+  background-position: 15mm 15mm;
+  background-size: 180mm;
+  background-repeat: no-repeat;
+}
+
+@page chapter:right {
+  @top-right {
+    content: string(subtitle-text);
+    margin-right: -10mm;
+    margin-top: 10mm;
+    color: var(--custom-grey60);
+    font-size: 0.8em;
+    text-transform: uppercase;
+    vertical-align: top;
+  }
+  @bottom-left {
+    content: "bitReport / " string(date-text);
+    margin-left: -10mm;
+    margin-top: 10mm;
+    padding-top: 1.5mm;
+    color: var(--custom-green);
+    font-size: 0.7em;
+    vertical-align: top;
+    border-top: 0.5px solid var(--custom-green);    
+  }
+  @bottom-right {
+    content: counter(page);
+    margin-right: -10mm;
+    margin-top: 10mm;
+    padding-top: 1.5mm;
+    color: var(--custom-green);
+    font-size: 0.7em;
+    vertical-align: top;
+    border-top: 0.5px solid var(--custom-green);
+  }
+  /*background-image: url(../image/header-ruler-right-green.svg);
+   ## We put the SVG directly in the CSS - with Base 64 - so that it works in all browser..*/
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgZGF0YS1uYW1lPSJMYXllciAzIgogICB2ZXJzaW9uPSIxLjEiCiAgIHZpZXdCb3g9IjAgMCA1MTAuMjQgOS4zOSIKICAgaWQ9InN2ZzIiCiAgIHNvZGlwb2RpOmRvY25hbWU9ImhlYWRlci1ydWxlci1yaWdodC1ncmVlbi5zdmciCiAgIGlua3NjYXBlOnZlcnNpb249IjEuMyAoMGUxNTBlZCwgMjAyMy0wNy0yMSkiCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBpZD0ibmFtZWR2aWV3MiIKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiMwMDAwMDAiCiAgICAgYm9yZGVyb3BhY2l0eT0iMC4yNSIKICAgICBpbmtzY2FwZTpzaG93cGFnZXNoYWRvdz0iMiIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VjaGVja2VyYm9hcmQ9IjAiCiAgICAgaW5rc2NhcGU6ZGVza2NvbG9yPSIjZDFkMWQxIgogICAgIGlua3NjYXBlOnpvb209IjIuNTUxNzQwNCIKICAgICBpbmtzY2FwZTpjeD0iMjU1LjEyIgogICAgIGlua3NjYXBlOmN5PSI0LjUwNjcyOCIKICAgICBpbmtzY2FwZTp3aW5kb3ctd2lkdGg9IjE3NDQiCiAgICAgaW5rc2NhcGU6d2luZG93LWhlaWdodD0iODg0IgogICAgIGlua3NjYXBlOndpbmRvdy14PSIxOTIwIgogICAgIGlua3NjYXBlOndpbmRvdy15PSI4NCIKICAgICBpbmtzY2FwZTp3aW5kb3ctbWF4aW1pemVkPSIwIgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9InN2ZzIiIC8+CiAgPG1ldGFkYXRhCiAgICAgaWQ9Im1ldGFkYXRhMSI+CiAgICA8cmRmOlJERj4KICAgICAgPGNjOldvcmsKICAgICAgICAgcmRmOmFib3V0PSIiPgogICAgICAgIDxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PgogICAgICAgIDxkYzp0eXBlCiAgICAgICAgICAgcmRmOnJlc291cmNlPSJodHRwOi8vcHVybC5vcmcvZGMvZGNtaXR5cGUvU3RpbGxJbWFnZSIgLz4KICAgICAgPC9jYzpXb3JrPgogICAgPC9yZGY6UkRGPgogIDwvbWV0YWRhdGE+CiAgPGRlZnMKICAgICBpZD0iZGVmczEiPgogICAgPHN0eWxlCiAgICAgICBpZD0ic3R5bGUxIj4uY2xzLTF7ZmlsbDpub25lO3N0cm9rZTojMDg3MmI5O3N0cm9rZS13aWR0aDowLjVweDt9PC9zdHlsZT4KICA8L2RlZnM+CiAgPHBhdGgKICAgICBkPSJtMCAwaDUxMC4yMyIKICAgICBmaWxsPSIjMDA3MmJjIgogICAgIHN0cm9rZT0iIzAwNzJiYyIKICAgICBzdHJva2Utd2lkdGg9Ii45NDQ4NyIKICAgICBpZD0icGF0aDEiCiAgICAgc3R5bGU9InN0cm9rZTojMmViNjJjO3N0cm9rZS1vcGFjaXR5OjE7ZmlsbDojMmViNjJjO2ZpbGwtb3BhY2l0eToxIiAvPgogIDxwYXRoCiAgICAgZD0ibTMxMC4yMiAxLjQ0NTFoMjAwIgogICAgIGZpbGw9IiMwMDcyYmMiCiAgICAgc3Ryb2tlPSIjMDA3MmJjIgogICAgIHN0cm9rZS13aWR0aD0iMi42MDYzIgogICAgIGlkPSJwYXRoMiIKICAgICBzdHlsZT0iZmlsbDojMmViNjJjO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTojMmViNjJjO3N0cm9rZS1vcGFjaXR5OjEiIC8+Cjwvc3ZnPgo=");
+
+
+  background-position: 15mm 15mm;
+  background-size: 180mm;
+  background-repeat: no-repeat;
+}
+
+
+@page :first {
+  margin: 30mm 10mm 10mm 10mm;
+  @top-left {
+  /*content: url("../image/R_logo.svg");
+   ## We put the SVG directly in the CSS - with Base 64 - so that it works in all browser..   */
+    content: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNzJwdCIgaGVpZ2h0PSI1NXB0IiB2aWV3Qm94PSIwIDAgNzIgNTUiIHZlcnNpb249IjEuMSI+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhcjAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMC4zNzk3MjYiIHkxPSIwLjE2OTk4OSIgeDI9IjAuOTExMjA4IiB5Mj0iMC43NjMyNiIgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCg3MiwwLDAsNDcuOTYwOTM4LDAsMCkiPgo8c3RvcCBvZmZzZXQ9IjAiIHN0eWxlPSJzdG9wLWNvbG9yOnJnYig3OC44MjM1MjklLDc5LjYwNzg0MyUsODAuNzg0MzE0JSk7c3RvcC1vcGFjaXR5OjE7Ii8+CjxzdG9wIG9mZnNldD0iMSIgc3R5bGU9InN0b3AtY29sb3I6cmdiKDQ4LjIzNTI5NCUsNDcuODQzMTM3JSw1MC41ODgyMzUlKTtzdG9wLW9wYWNpdHk6MTsiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8ZyBpZD0ic3VyZmFjZTEiPgo8cGF0aCBzdHlsZT0iIHN0cm9rZTpub25lO2ZpbGwtcnVsZTpub256ZXJvO2ZpbGw6dXJsKCNsaW5lYXIwKTsiIGQ9Ik0gNDIgNDIuNTU0Njg4IEMgMjcgNDIuNTU0Njg4IDE0LjI1MzkwNiAzNC45NDUzMTIgMTQuMjUzOTA2IDI1LjgyNDIxOSBDIDE0LjI1MzkwNiAxNi43MDcwMzEgMjUuNSA5LjEyMTA5NCA0MC41IDkuMTIxMDk0IEMgNTkuNDQ1MzEyIDkuMTIxMDk0IDY4LjIyMjY1NiAxNi41MDM5MDYgNjguMjIyNjU2IDI1LjYyMTA5NCBDIDY4LjIyMjY1NiAzNC43NDIxODggNTguNTQ2ODc1IDQyLjU1NDY4OCA0MiA0Mi41NTQ2ODggTSAzNiAwIEMgMTYuNSAwIDAgMTAuNjQwNjI1IDAgMjQuMzE2NDA2IEMgMCAzNy4yMzgyODEgMTYuMzk4NDM4IDQ3Ljk2MDkzOCAzNS45MDIzNDQgNDcuOTYwOTM4IEMgNTUuMzk4NDM4IDQ3Ljk2MDkzOCA3MiAzNy45OTYwOTQgNzIgMjQuMzE2NDA2IEMgNzIgMTAuNjQwNjI1IDU1LjUgMCAzNiAwICIvPgo8cGF0aCBzdHlsZT0iIHN0cm9rZTpub25lO2ZpbGwtcnVsZTpub256ZXJvO2ZpbGw6cmdiKDEyLjk0MTE3NiUsMzkuNjA3ODQzJSw3MS4zNzI1NDklKTtmaWxsLW9wYWNpdHk6MTsiIGQ9Ik0gMjkuNzk2ODc1IDE0Ljc2OTUzMSBMIDI5Ljc5Njg3NSA1NC45ODA0NjkgTCA0MS43ODkwNjIgNTQuOTgwNDY5IEwgNDEuNzg5MDYyIDM5LjM0Mzc1IEMgNDQuNzg5MDYyIDM5LjM0Mzc1IDQ2LjU3NDIxOSAzOC42Nzk2ODggNDguNTM1MTU2IDQyLjMyNDIxOSBDIDUxLjUzNTE1NiA0Ny41MzUxNTYgNTUuMjgxMjUgNTQuOTgwNDY5IDU1LjI4MTI1IDU0Ljk4MDQ2OSBMIDY5LjUyMzQzOCA1NC45ODA0NjkgQyA2OS41MjM0MzggNTQuOTgwNDY5IDYwLjUzMTI1IDQwLjA4OTg0NCA1OS43ODEyNSAzOS4zNDM3NSBDIDU4LjM5ODQzOCAzNy44NTU0NjkgNTYuNzgxMjUgMzcuODU1NDY5IDU0LjUzNTE1NiAzNy4xMDkzNzUgQyA1OS4wMzEyNSAzNi4zNjcxODggNjMuMjIyNjU2IDM0LjQ3NjU2MiA2NC42Nzk2ODggMzAuNDIxODc1IEMgNjUuOTU3MDMxIDI2LjY5OTIxOSA2NS44MDQ2ODggMjEuOTY0ODQ0IDYzLjA3NDIxOSAxOC43ODkwNjIgQyA2MC43MDcwMzEgMTYuMjczNDM4IDU4LjI4MTI1IDE0Ljc2OTUzMSA1Mi4yODUxNTYgMTQuNzY5NTMxIFogTSA0MS43ODkwNjIgMjMuMTQ0NTMxIEwgNDkuNjYwMTU2IDIzLjE0NDUzMSBDIDUxLjUyNzM0NCAyMy4xNDQ1MzEgNTMuMDM1MTU2IDI1LjAwNzgxMiA1My4wMzUxNTYgMjYuODY3MTg4IEMgNTMuMDM1MTU2IDI4LjczMDQ2OSA1MS41MzUxNTYgMzAuNTg5ODQ0IDQ5LjY2MDE1NiAzMC41ODk4NDQgTCA0MS43ODkwNjIgMzAuNTg5ODQ0IFogTSA0MS43ODkwNjIgMjMuMTQ0NTMxICIvPgo8L2c+Cjwvc3ZnPgo=");
+
+    width: 62.5mm;
+    margin-top: 7mm;
+  }
+  @top-right {
+    content: url("../image/koRea_logo.png"); 
+    width: 62.5mm;
+    margin-top: 7mm;
+  }
+  @bottom-left {
+    content: none !important;
+  }
+  @bottom-right {
+    content: none !important;
+  }
+  background-image: var(--front-cover);
+  background-position: 10mm 30mm;
+  background-size: 190mm 257mm;
+  background-repeat: no-repeat;
+}
+
+/* Front cover */
+.front-cover {
+  break-after: recto;
+}
+
+/* Front page or title page */
+.front-page {
+  counter-reset: page;
+  break-after: page;
+}
+
+/* page breaks; aka CSS fragmentation */
+.level1 {
+  /* break-before: recto; */
+  page: chapter;
+}
+.front-matter-container .level1 {
+  page: frontmatter;
+}
+.section > h1, .section > h2, .section > h3, .section > h4, .section > h5, .section > h6 {
+  break-after: avoid;
+}
+.footenotes {
+  break-before: always;
+  break-after: always;
+}
+.figure {
+  break-inside: avoid;
+}
+
+
+/* last page or back cover */
+.back-cover {
+  page: back-cover;
+}
+
+@page back-cover {
+  background-image: var(--back-cover);
+  background-position: 10mm 30mm;
+  background-size: 190mm 257mm;
+  background-repeat: no-repeat;
+}
+
+.back-title:after {
+  content: string(title-text);
+}
+.back-subtitle:after {
+  content: string(subtitle-text);
+}
+
+
+/* do not break captions */
+caption {
+  break-inside: avoid;
+  break-after: avoid;
+}
+
+/* reset page numbering for main content */
+/*.main .level1:first-child h1 {
+  counter-reset: page;
+} */
+
+/* do not break captions */
+caption,
+.caption {
+  break-inside: avoid;
+  break-after: avoid;
+}

@@ -3,7 +3,7 @@
 \docType{data}
 \name{bit_pal_orange}
 \alias{bit_pal_orange}
-\title{bitR orange color palette}
+\title{dpxR orange color palette}
 \format{
 An object of class \code{data.frame} with 1 rows and 6 columns.
 }
@@ -13,7 +13,7 @@ bit_pal_orange
 \description{
 ORANGE:  PANTONE 300 C/U / CMYK 0 68 100 0
 RGB 243 115 33 / HEX #F37321
-\code{bit_pal_orange} 추가 bitR 색상 팔레트 제공
+\code{bit_pal_orange} 추가 dpxR 색상 팔레트 제공
 6가지 색상을 포함하는 데이터 프레임 (shades of \code{\link{Orange}}).
 }
 \examples{
@@ -34,9 +34,9 @@ seecol(bit_pal_orange)
 }
 }
 \seealso{
-\code{\link{bit_pal}} 5가지 주요 색상이 있는 bitR 기본 색상 팔레트. \code{\link{bit_pal_orange}};
-\code{\link{bit_pal_darkblue}} bitR 색상 팔레트 대체 색상의 경우;
-\code{\link{bit_pal_primary}} 기본 색상이 있는 bitR 색상 팔레트의 경우;
+\code{\link{bit_pal}} 5가지 주요 색상이 있는 dpxR 기본 색상 팔레트. \code{\link{bit_pal_orange}};
+\code{\link{bit_pal_darkblue}} dpxR 색상 팔레트 대체 색상의 경우;
+\code{\link{bit_pal_primary}} 기본 색상이 있는 dpxR 색상 팔레트의 경우;
 \code{\link{seecol}} 팔래트 색상 보기;
 \code{\link{usecol}} 팔레트 색상 사용하기.
 
@@ -48,6 +48,7 @@ Other color palettes:
 \code{\link{bit_pal_grey}},
 \code{\link{bit_pal_primary}},
 \code{\link{bit_pal_red}},
+\code{\link{bit_pal_violet}},
 \code{\link{bit_pal_yellow}},
 \code{\link{bit_pal}}
 }

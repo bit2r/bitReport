@@ -3,7 +3,7 @@
 \docType{data}
 \name{bit_pal_yellow}
 \alias{bit_pal_yellow}
-\title{bitR yellow color palette.}
+\title{dpxR yellow color palette.}
 \format{
 An object of class \code{data.frame} with 1 rows and 6 columns.
 }
@@ -17,7 +17,7 @@ YELLOW: PANTONE PROCESS YELLOW C/U
   CMYK 3 1 100 0
   RGB 250 235 0
   HEX #FAEB00
-  \code{bit_pal_yellow} provides an additional bitR color palette
+  \code{bit_pal_yellow} provides an additional dpxR color palette
 as a data frame containing 6 colors (shades of
 \code{\link{bit_yellow}}).
 
@@ -35,8 +35,8 @@ seecol(bit_pal_yellow)
 }
 }
 \seealso{
-\code{\link{bit_pal}} for the bitR default color palette with all 5 colors of \code{\link{bit_yellow}};
-\code{\link{bit_pal_primary}} for a bitR color palette with primary colors;
+\code{\link{bit_pal}} for the dpxR default color palette with all 5 colors of \code{\link{bit_yellow}};
+\code{\link{bit_pal_primary}} for a dpxR color palette with primary colors;
 \code{\link{seecol}} to show color palettes;
 \code{\link{usecol}} to use color palettes.
 
@@ -49,6 +49,7 @@ Other color palettes:
 \code{\link{bit_pal_orange}},
 \code{\link{bit_pal_primary}},
 \code{\link{bit_pal_red}},
+\code{\link{bit_pal_violet}},
 \code{\link{bit_pal}}
 }
 \concept{color palettes}

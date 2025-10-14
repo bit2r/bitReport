@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="Layer_1"
+   data-name="Layer 1"
+   viewBox="0 0 538.58 728.5"
+   version="1.1"
+   sodipodi:docname="backcover_violet.svg"
+   inkscape:version="1.3.1 (91b66b0, 2023-11-16)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata
+     id="metadata103">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1512"
+     inkscape:window-height="965"
+     id="namedview101"
+     showgrid="false"
+     inkscape:zoom="1.3836651"
+     inkscape:cx="273.54885"
+     inkscape:cy="450.97618"
+     inkscape:window-x="1760"
+     inkscape:window-y="31"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="Layer_1"
+     inkscape:document-rotation="0"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <defs
+     id="defs12">
+    <style
+       id="style10">.cls-1{fill:#0071bb;}.cls-2{fill:#fff;}</style>
+  </defs>
+  <polygon
+     class="cls-1"
+     points="76.99 0 66.5 10.49 56.01 0 0 0 0 728.5 538.58 728.5 538.58 0 76.99 0"
+     id="polygon14"
+     style="fill:#be8dd9;fill-opacity:1" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:29.3333px;line-height:1.25;font-family:NanumSquare;-inkscape-font-specification:'NanumSquare, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff"
+     x="54.139381"
+     y="558.01733"
+     id="text934"><tspan
+       sodipodi:role="line"
+       id="tspan2"
+       x="54.139381"
+       y="558.01733">한국 R 사용자회</tspan></text>
+</svg>

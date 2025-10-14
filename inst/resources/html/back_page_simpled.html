@@ -1,0 +1,88 @@
+<div class="back-cover">
+  <p>  
+    <span class="back-title"></span>
+    <span class="back-subtitle"></span>
+  </p>
+
+  <h4><strong>보고서 정보</strong></h4>
+  <p>
+    <span class="back-reportno"></span>
+    <br>
+    <span class="back-pubdate"></span>
+  </p>
+  
+  <h4><strong>Contact us</strong></h4>
+  <p>
+    <span class="back-afil"></span>
+    <br>    
+    <!-- <span class="back-name"></span> -->
+    <span class="back-authorname">집필자: </span>
+    <br>
+    <!-- <span class="back-email blue"></span> -->
+    <span class="back-email"></span>
+  </p>
+  
+  <p><a class="uri" href="https://r2bit.com" style="text-decoration: none;">https://r2bit.com</a></p>
+
+</div>
+
+<style>
+/* Hide header and footer only on the last page (back cover) */
+.pagedjs_back-cover_page .pagedjs_margin-top,
+.pagedjs_back-cover_page .pagedjs_margin-bottom {
+  display: none !important;
+  visibility: hidden;
+}
+</style>
+
+<script>
+  let backTitle = document.querySelector('.front-page .title')?.childNodes[0].nodeValue;
+  if (backTitle == undefined) {
+    null
+  } else {
+    document.querySelector('.back-title').innerHTML = '<h1 style="font-size: 1.9em; font-family: NanumSquare, sans-serif; margin-bottom: 10px">' + backTitle + '</h1>';
+  }
+  
+  let backSubtitle = document.querySelector('.front-page .subtitle span')?.childNodes[0].nodeValue;
+  if (backSubtitle == undefined) {
+    null
+  } else {
+    document.querySelector('.back-subtitle').innerHTML = '<h2 style="font-size: 1.6em; color: #222222; font-family: NanumSquare, sans-serif; margin-bottom: 550px">' + backSubtitle + '</h2>';
+  }  
+
+  let reportNo = JSON.parse(document.querySelector('#pandoc-meta')?.childNodes[0].nodeValue).params.reportno;
+  if (reportNo == undefined) {
+    null
+  } else {
+    document.querySelector('.back-reportno').innerHTML = '발행호수: ' + reportNo;
+  }
+  
+  let pubDate = document.querySelector('.front-page .date')?.childNodes[0].nodeValue;
+  if (pubDate == undefined) {
+    null
+  } else {
+    document.querySelector('.back-pubdate').innerHTML = '발행일: ' + pubDate;
+  }
+  
+  let authorAfil = document.querySelector('.front-page .author-afil')?.childNodes[0].nodeValue;
+  if (authorAfil == undefined) {
+    null
+  } else {
+    document.querySelector('.back-afil').innerHTML = '발행부서: ' + authorAfil;
+  }
+  
+  let authorName = document.querySelector('.front-page .author')?.childNodes[0].nodeValue;
+  if (authorName == undefined) {
+    null
+  } else {
+    document.querySelector('.back-authorname').innerHTML = '집필자: ' + authorName;
+  }  
+  
+  let userEmail = document.querySelector('.front-page .email')?.childNodes[0].nodeValue;
+  if (userEmail == undefined) {
+    null
+  } else {
+    document.querySelector('.back-email').innerHTML = '연락처: <a href=mailto:"'+userEmail+'" style="color: #0072BC; text-decoration: none;">'+userEmail+'</a>';
+  }
+</script>
+

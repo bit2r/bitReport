@@ -69,11 +69,11 @@ o_i_colors <- c(rgb(  0,   0,   0, maxColorValue = 255),  # black
                 rgb(240, 228,  66, maxColorValue = 255),  # yellow
                 rgb(  0, 114, 178, maxColorValue = 255),  # blue
                 rgb(213,  94,   0, maxColorValue = 255),  # vermillion
-                rgb(204, 121, 167, maxColorValue = 255)   # purple
+                rgb(204, 121, 167, maxColorValue = 255)   # violet
 )
 
 # (b) Vector of color names:
-o_i_names <- c("black", "orange", "skyblue", "green", "yellow", "blue", "vermillion", "purple")
+o_i_names <- c("black", "orange", "skyblue", "green", "yellow", "blue", "vermillion", "violet")
 
 # (c) Use newpal() to combine colors and names:
 pal_okabe_ito <- newpal(col = o_i_colors,

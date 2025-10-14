@@ -1,4 +1,13 @@
-# CHANGES IN R VERSION 0.1.6.9000:
+# CHANGES IN R VERSION 0.2.0.9000:
+
+## MAJOR CHANGES:
+
+*  Paged report 템플리트에 green, violet 추가(#7)
+*  Simple paged report 추가(#7)    
+
+    
+    
+# CHANGES IN R VERSION 0.1.6:
 
 ## MINOR CHANGES:
 

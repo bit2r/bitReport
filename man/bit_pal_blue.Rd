@@ -3,7 +3,7 @@
 \docType{data}
 \name{bit_pal_blue}
 \alias{bit_pal_blue}
-\title{bitR blue color palette}
+\title{dpxR blue color palette}
 \format{
 An object of class \code{data.frame} with 1 rows and 6 columns.
 }
@@ -13,7 +13,7 @@ bit_pal_blue
 \description{
 BLUE:  PANTONE 300 C/U / CMYK 99 50 0 0
 RGB 0 114 188 / HEX #0072BC
-\code{bit_pal_blue} provides an additional bitR color palette
+\code{bit_pal_blue} provides an additional dpxR color palette
 as a data frame containing 6 colors (shades of \code{\link{Blue}}).
 
 See \url{https://media.unhcr.org/archive/Brand-Book-for-external-partners-2CZ7A2P0CGAY.html} for details.
@@ -40,9 +40,9 @@ seecol(bit_pal_blue)
 }
 }
 \seealso{
-\code{\link{bit_pal}} for the bitR default color palette with 5 main colors of \code{\link{bit_pal_blue}};
-\code{\link{bit_pal_darkblue}} for an alternative blue bitR color palette;
-\code{\link{bit_pal_primary}} for a bitR color palette with primary colors;
+\code{\link{bit_pal}} for the dpxR default color palette with 5 main colors of \code{\link{bit_pal_blue}};
+\code{\link{bit_pal_darkblue}} for an alternative blue dpxR color palette;
+\code{\link{bit_pal_primary}} for a dpxR color palette with primary colors;
 \code{\link{seecol}} to show color palettes;
 \code{\link{usecol}} to use color palettes.
 
@@ -54,6 +54,7 @@ Other color palettes:
 \code{\link{bit_pal_orange}},
 \code{\link{bit_pal_primary}},
 \code{\link{bit_pal_red}},
+\code{\link{bit_pal_violet}},
 \code{\link{bit_pal_yellow}},
 \code{\link{bit_pal}}
 }

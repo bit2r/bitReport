@@ -1,8 +1,8 @@
 Package: bitReport
 Type: Package
 Title: Template for R-based analysis report
-Version: 0.1.5.9000
-Date: 2023-11-26
+Version: 0.2.0.9000
+Date: 2025-10-15
 Authors@R: c(
   person("Choonghyun", "Ryu",, "choonghyun.ryu@gmail.com", role = c("aut", "cre"))
   )
@@ -14,6 +14,7 @@ Description: A collection of tools for creating data analysis reports, slides,
     with flexdashboard through R Markdown.
 Imports:
     dplyr,
+    ellmer,
     extrafont,
     ggplot2,
     grid,
@@ -38,4 +39,4 @@ SystemRequirements: Pandoc (>= 2.2.3)
 Encoding: UTF-8
 LazyData: true
 VignetteBuilder: knitr    
-RoxygenNote: 7.2.2
+RoxygenNote: 7.2.3
