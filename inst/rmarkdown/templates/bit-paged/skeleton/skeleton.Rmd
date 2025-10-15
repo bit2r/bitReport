@@ -101,8 +101,7 @@ if (is.null(bottom_txt)) {
 back_cover <- NULL
 
 if (is.null(back_cover)) {
-  back_cover_file <- file.path(system.file(package = "bitReport"), "resources", "image", "backcover_violet.svg")
-  #back_cover_file <- file.path(system.file(package = "bitReport"), "resources", "image", "backcover_blue.svg")  
+  back_cover_file <- file.path(system.file(package = "bitReport"), "resources", "image", "backcover_blue.svg")  
   base64_back_cover <- knitr::image_uri(back_cover_file)
 } else {
   base64_back_cover <- knitr::image_uri(back_cover)
