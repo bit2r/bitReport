@@ -17,8 +17,12 @@
   --custom-grey10: rgb(230, 230, 230);
   --custom-blue: rgb(0, 114, 188);
   --custom-lightblue: rgb(204, 227, 242);
-  --custom-orange: rgb(255, 127, 42);
-  --custom-lightorange: rgb(255, 204, 170);
+  --custom-orange: rgb(255, 127, 42); 
+  --custom-lightorange: rgb(255, 204, 170); 
+  --custom-violet: rgb(115,  50, 167); 
+  --custom-lightviolet: rgb(172, 126, 209);   
+  --custom-green: rgb(46, 182, 44);
+  --custom-lightgreen: rgb(131, 212, 117);    
 }
 
 html {
