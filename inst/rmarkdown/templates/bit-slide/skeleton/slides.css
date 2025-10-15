@@ -168,14 +168,15 @@ div.my-footer {
     border-top: 1px solid var(--orange);
     position: absolute;
     bottom: 0px;
+    left: 110px;
     height: 40px;
-    width: 90%;
+    width: 85%;
 }
 div.my-footer span {
     font-size: 20px;
     position: absolute;
     bottom: 10px;
-    left: 45px;
+    left: 10px;
     color: #8A8A8A;
 }
 div.my-footer a {
