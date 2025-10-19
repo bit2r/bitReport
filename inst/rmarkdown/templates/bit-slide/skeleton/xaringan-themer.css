@@ -56,16 +56,16 @@
   --custom-lightgreen: rgb(131, 212, 117); 
   
   /* Colors */
-  --text-color: var(--custom-grey60);
-  --header-color: var(--custom-green); 
-  --background-color: var(--white);
+  --text-color: #f6f6f6;
+  --header-color: rgb(201, 170, 250);  
+  --background-color: #002b36;
   --link-color: #A7D5E8;
   --text-bold-color: #E9AFA3;
   --code-highlight-color: #A7D5E8;
   --inverse-text-color: #002b36;
   --inverse-background-color: #ffffff;
   --inverse-header-color: #A7D5E8;
-  --title-slide-background-color: var(--custom-grey60);
+  --title-slide-background-color: #002b36;
   --title-slide-text-color:#E9AFA3;
   --header-background-color: #A7D5E8;
   --header-background-text-color: #002b36;
