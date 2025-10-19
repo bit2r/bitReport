@@ -22,6 +22,7 @@
 @import url(https://fonts.googleapis.com/css?family=Cabin:600,600i&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Code&display=swap);
 @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap);
 
 :root {
   /* Fonts */
@@ -29,7 +30,7 @@
   --text-font-is-google: 1;
   --text-font-family-fallback: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial;
   --text-font-base: sans-serif;
-  --header-font-family: Cabin;
+  --header-font-family: 'Noto San KR';
   --header-font-is-google: 1;
   --code-font-family: 'Source Sans Code';
   --code-font-is-google: 1;
@@ -41,20 +42,31 @@
   --header-h2-font-size: 1.75rem;
   --header-h3-font-size: 1.5rem;
 
+  /* Defile Color Tables */
+  --custom-grey60: rgb(102, 102, 102);
+  --custom-grey20: rgb(204, 204, 204);
+  --custom-grey10: rgb(230, 230, 230);
+  --custom-blue: rgb(0, 114, 188);
+  --custom-lightblue: rgb(204, 227, 242);
+  --custom-orange: rgb(255, 127, 42); 
+  --custom-lightorange: rgb(255, 204, 170); 
+  --custom-violet: rgb(115,  50, 167); 
+  --custom-lightviolet: rgb(172, 126, 209);   
+  --custom-green: rgb(46, 182, 44);
+  --custom-lightgreen: rgb(131, 212, 117); 
+  
   /* Colors */
-  --text-color: #f6f6f6;
-  /*--header-color: #A7D5E8;*/
-  --header-color: rgb(243, 155, 108);
-  --background-color: #002b36;
+  --text-color: var(--custom-grey60);
+  --header-color: var(--custom-green); 
+  --background-color: var(--white);
   --link-color: #A7D5E8;
   --text-bold-color: #E9AFA3;
   --code-highlight-color: #A7D5E8;
   --inverse-text-color: #002b36;
   --inverse-background-color: #ffffff;
   --inverse-header-color: #A7D5E8;
-  --title-slide-background-color: #002b36;
-  /*--title-slide-text-color: #A7D5E8;*/
-  --title-slide-text-color:rgb(243, 155, 108);
+  --title-slide-background-color: var(--custom-grey60);
+  --title-slide-text-color:#E9AFA3;
   --header-background-color: #A7D5E8;
   --header-background-text-color: #002b36;
 }
