@@ -821,7 +821,7 @@ knitr::kable(usa_crime,
 ::: {.back-contact}
 [홍길동]{.back-name}
 
-한국 R 사용자회
+Data Science Team
 
 [contact1email@email.com](mailto:contact1email@email.com)
 :::
