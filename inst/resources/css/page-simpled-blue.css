@@ -798,7 +798,7 @@ a.email {
   }
   /* running date */
   @bottom-left {
-    content: "디플래닉스 / " string(h2-date);
+    content: "bitReport / " string(h2-date);
     margin-left: -10mm;
     margin-top: 10mm;
     padding-top: 1.5mm;
