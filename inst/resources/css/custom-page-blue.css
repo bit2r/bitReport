@@ -34,7 +34,8 @@
 
 @page chapter:left {
   @top-left {
-    content: string(title-text) " > " string(subtitle-text);
+    /* content: string(title-text) " > " string(subtitle-text); */
+    content: string(title-text);
     margin-left: -10mm;
     margin-top: 10mm;
     color: var(--custom-grey60);
@@ -82,7 +83,8 @@
 
 @page chapter:right {
   @top-right {
-    content: string(title-text) " > " string(subtitle-text);
+    /* content: string(title-text) " > " string(subtitle-text); */
+    content: string(subtitle-text);
     margin-right: -10mm;
     margin-top: 10mm;
     color: var(--custom-grey60);
